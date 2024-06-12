@@ -28,7 +28,11 @@ const Header: FC = () => {
             <Logo onClick={scrollElementByIdIntoView("home")} />
             <Box display="flex" alignItems={"center"}>
               <Box mx={3}>
-                <StyledLink variant="button" color="primary.contrastText">
+                <StyledLink
+                  onClick={scrollElementByIdIntoView("video")}
+                  variant="button"
+                  color="primary.contrastText"
+                >
                   Home
                 </StyledLink>
               </Box>
@@ -42,13 +46,17 @@ const Header: FC = () => {
                 </StyledLink>
               </Box>
               <Box mx={2}>
-                <StyledLink variant="button" color="primary.contrastText">
+                <StyledLink
+                  onClick={scrollElementByIdIntoView("contacts")}
+                  variant="button"
+                  color="primary.contrastText"
+                >
                   Contact
                 </StyledLink>
               </Box>
               <Box mx={2}>
                 <StyledLink variant="button" color="primary.contrastText">
-                  Schedules
+                  Pricing
                 </StyledLink>
               </Box>
               <Box mx={2}>
