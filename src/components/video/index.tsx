@@ -9,7 +9,11 @@ const StartingVideo = () => {
         muted
         loop
         id="background"
-        style={{ opacity: 0.9, width: "100%", backgroundColor: "black" }}
+        style={{
+          opacity: 0.9,
+          height: "100%",
+          backgroundColor: "black",
+        }}
       >
         <source src={video}></source>
       </video>
@@ -24,9 +28,7 @@ const StartingVideo = () => {
           position={"absolute"}
           sx={{
             typography: {
-              xs: { top: "10%" },
-              sm: { top: "20%" },
-              lg: { top: "40%" },
+              xs: { top: "47%" },
             },
           }}
         >
@@ -64,7 +66,7 @@ const StartingVideo = () => {
               },
             }}
           >
-            Start your jorney today
+            Start your journey today
           </Typography>
           <Button variant="contained" color="secondary">
             Become a Member

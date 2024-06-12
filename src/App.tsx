@@ -5,7 +5,7 @@ import StartingVideo from "./components/video";
 
 function App() {
   return (
-    <Box>
+    <Box overflow="hidden">
       <Header />
       <StartingVideo />
       <Services />
