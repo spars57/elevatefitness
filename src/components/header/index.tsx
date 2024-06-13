@@ -27,7 +27,7 @@ const Header: FC = () => {
           >
             <Logo onClick={scrollElementByIdIntoView("home")} />
             <Box display="flex" alignItems={"center"}>
-              <Box mx={3}>
+              <Box mx={3} sx={{ display: { xs: "none", md: "flex" } }}>
                 <StyledLink
                   onClick={scrollElementByIdIntoView("video")}
                   variant="button"
@@ -36,7 +36,7 @@ const Header: FC = () => {
                   Home
                 </StyledLink>
               </Box>
-              <Box mx={2}>
+              <Box mx={2} sx={{ display: { xs: "none", md: "flex" } }}>
                 <StyledLink
                   onClick={scrollElementByIdIntoView("services")}
                   variant="button"
@@ -45,7 +45,7 @@ const Header: FC = () => {
                   About
                 </StyledLink>
               </Box>
-              <Box mx={2}>
+              <Box mx={2} sx={{ display: { xs: "none", md: "flex" } }}>
                 <StyledLink
                   onClick={scrollElementByIdIntoView("contacts")}
                   variant="button"
@@ -54,8 +54,12 @@ const Header: FC = () => {
                   Contact
                 </StyledLink>
               </Box>
-              <Box mx={2}>
-                <StyledLink variant="button" color="primary.contrastText">
+              <Box mx={2} sx={{ display: { xs: "none", md: "flex" } }}>
+                <StyledLink
+                  onClick={scrollElementByIdIntoView("pricing")}
+                  variant="button"
+                  color="primary.contrastText"
+                >
                   Pricing
                 </StyledLink>
               </Box>

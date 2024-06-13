@@ -1,5 +1,6 @@
 import { Box, Button, Fade, Typography } from "@mui/material";
 import video from "../../assets/background_video.mp4";
+import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
 const StartingVideo = () => {
   return (
@@ -68,7 +69,11 @@ const StartingVideo = () => {
           >
             Start your journey today
           </Typography>
-          <Button variant="contained" color="secondary">
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={scrollElementByIdIntoView("pricing")}
+          >
             Become a Member
           </Button>
         </Box>

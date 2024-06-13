@@ -1,7 +1,11 @@
 import { Box, Typography, TypographyProps, useTheme } from "@mui/material";
 import { FC } from "react";
 
-const Logo: FC<TypographyProps> = ({ ...props }) => {
+interface Props extends TypographyProps {
+  collapsed?: boolean;
+}
+
+const Logo: FC<Props> = ({ collapsed = false, ...props }) => {
   const theme = useTheme();
   return (
     <Typography
@@ -21,9 +25,13 @@ const Logo: FC<TypographyProps> = ({ ...props }) => {
       }}
       {...props}
     >
-      <Box sx={{ color: theme.palette.primary.contrastText }}>ELEVATE</Box>
+      <Box sx={{ color: theme.palette.primary.contrastText }}>
+        {collapsed ? "E" : "ELEVATE"}
+      </Box>
       &nbsp;
-      <Box sx={{ color: theme.palette.secondary.main }}>Fitness</Box>
+      <Box sx={{ color: theme.palette.secondary.main }}>
+        {collapsed ? "F" : "FITNESS"}
+      </Box>
     </Typography>
   );
 };
