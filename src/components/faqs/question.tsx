@@ -4,6 +4,7 @@ import {
   Collapse,
   IconButton,
   Slide,
+  styled,
   Typography,
 } from "@mui/material";
 import React, { FC, ReactNode } from "react";
@@ -17,6 +18,13 @@ type Props = {
   timeout?: number;
 } & BoxProps;
 
+const StyledBox = styled(Box)({
+  transition: "margin 0.5s",
+  "&:hover": {
+    marginLeft: 20,
+  },
+});
+
 const FrequentlyAskedQuestion: FC<Props> = ({
   question,
   response,
@@ -27,7 +35,7 @@ const FrequentlyAskedQuestion: FC<Props> = ({
   const onOpen = () => setOpen(true);
   const onClose = () => setOpen(false);
   return (
-    <Box
+    <StyledBox
       onClick={open ? onClose : onOpen}
       p={1}
       alignItems={"center"}
@@ -60,7 +68,7 @@ const FrequentlyAskedQuestion: FC<Props> = ({
           <Typography variant="body2">{response}</Typography>
         </Box>
       </Collapse>
-    </Box>
+    </StyledBox>
   );
 };
 

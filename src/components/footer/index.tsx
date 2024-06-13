@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Link, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
 import Logo from "../logo";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -7,6 +7,7 @@ import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
+import Link from "../link";
 
 const Footer = () => {
   return (
@@ -188,11 +189,12 @@ const Footer = () => {
             >
               Created & Distributed by{" "}
               <Link
+                style={{ textDecoration: "none", cursor: "pointer" }}
                 color="secondary"
                 onClick={() => openURLInNewTab("https://bytestudios.dev")}
               >
                 ByteStudios
-              </Link>
+              </Link>{" "}
             </Typography>
           </Grid>
         </Grid>

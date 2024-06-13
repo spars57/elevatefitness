@@ -1,4 +1,5 @@
 import { Box, Button, ButtonProps, Typography, useTheme } from "@mui/material";
+import { styled } from "@mui/system";
 import { FC, ReactNode } from "react";
 
 type Props = {
@@ -10,6 +11,13 @@ type Props = {
   onGetStarted?: () => void;
 };
 
+const StyledBox = styled(Box)(({ theme }) => ({
+  transition: "border 0.5s, box-shadow 0.5s", // Added transition for box-shadow
+  "&:hover": {
+    boxShadow: `0 0 15px ${theme.palette.secondary.main}`, // Added box-shadow for hover state
+  },
+}));
+
 const PricingCard: FC<Props> = ({
   title,
   price,
@@ -20,7 +28,7 @@ const PricingCard: FC<Props> = ({
 }) => {
   const theme = useTheme();
   return (
-    <Box
+    <StyledBox
       display="flex"
       flexDirection={"column"}
       sx={{
@@ -54,7 +62,7 @@ const PricingCard: FC<Props> = ({
           Get Started!
         </Button>
       </Box>
-    </Box>
+    </StyledBox>
   );
 };
 

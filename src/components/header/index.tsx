@@ -6,15 +6,24 @@ import {
   Toolbar,
   useTheme,
 } from "@mui/material";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
+import Link from "../link";
 import Logo from "../logo";
-import { StyledLink } from "./styles";
 
 const Header: FC = () => {
   const theme = useTheme();
+
+  const [trigger, setTrigger] = useState(false);
+  useEffect(() => {
+    const handleScroll = () =>
+      window.scrollY > 997 ? setTrigger(true) : setTrigger(false);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <AppBar id="home" style={{ opacity: window.scrollY > 1100 ? 1 : 0.8 }}>
+    <AppBar id="home" style={{ opacity: trigger ? 1 : 0.8 }}>
       <Container maxWidth="lg">
         <Toolbar>
           <Box
@@ -28,40 +37,40 @@ const Header: FC = () => {
             <Logo onClick={scrollElementByIdIntoView("home")} />
             <Box display="flex" alignItems={"center"}>
               <Box mx={3} sx={{ display: { xs: "none", md: "flex" } }}>
-                <StyledLink
+                <Link
                   onClick={scrollElementByIdIntoView("video")}
                   variant="button"
                   color="primary.contrastText"
                 >
                   Home
-                </StyledLink>
+                </Link>
               </Box>
               <Box mx={2} sx={{ display: { xs: "none", md: "flex" } }}>
-                <StyledLink
+                <Link
                   onClick={scrollElementByIdIntoView("services")}
                   variant="button"
                   color="primary.contrastText"
                 >
                   About
-                </StyledLink>
+                </Link>
               </Box>
               <Box mx={2} sx={{ display: { xs: "none", md: "flex" } }}>
-                <StyledLink
+                <Link
                   onClick={scrollElementByIdIntoView("contacts")}
                   variant="button"
                   color="primary.contrastText"
                 >
                   Contact
-                </StyledLink>
+                </Link>
               </Box>
               <Box mx={2} sx={{ display: { xs: "none", md: "flex" } }}>
-                <StyledLink
+                <Link
                   onClick={scrollElementByIdIntoView("pricing")}
                   variant="button"
                   color="primary.contrastText"
                 >
                   Pricing
-                </StyledLink>
+                </Link>
               </Box>
               <Box mx={2}>
                 <Button
