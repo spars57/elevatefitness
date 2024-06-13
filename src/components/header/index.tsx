@@ -14,7 +14,7 @@ import { StyledLink } from "./styles";
 const Header: FC = () => {
   const theme = useTheme();
   return (
-    <AppBar id="home" style={{ opacity: 0.8 }}>
+    <AppBar id="home" style={{ opacity: window.scrollY > 1100 ? 1 : 0.8 }}>
       <Container maxWidth="lg">
         <Toolbar>
           <Box

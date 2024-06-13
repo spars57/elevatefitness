@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import Contacts from "./components/contacts";
+import FrequentlyAskedQuestions from "./components/faqs";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Pricing from "./components/pricing";
@@ -15,6 +16,7 @@ function App() {
       <Services />
       <Quote />
       <Pricing />
+      <FrequentlyAskedQuestions />
       <Contacts />
       <Footer />
     </Box>

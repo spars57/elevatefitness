@@ -1,30 +1,16 @@
 import { Box, Fade, Grid, Typography, useTheme } from "@mui/material";
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import ServiceItem from "./card";
 
 const Services: FC = () => {
   const theme = useTheme();
 
-  const [inView, setInView] = useState(false);
-  const elementRef = useRef(null);
-
+  const [trigger, setTrigger] = useState(false);
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-      },
-      {
-        root: null, // use the viewport as the container
-        rootMargin: "0px",
-        threshold: 0.1, // Adjust this threshold according to your needs
-      }
-    );
-
-    if (elementRef.current) observer.observe(elementRef.current);
-    return () => {
-      if (elementRef.current) observer.unobserve(elementRef.current);
-    };
-  }, [elementRef]);
+    const handleScroll = () => window.scrollY > 197 && setTrigger(true);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Grid
@@ -42,7 +28,7 @@ const Services: FC = () => {
         flexDirection={"column"}
         justifyContent={"center"}
       >
-        <Fade in={inView} timeout={1000}>
+        <Fade in={trigger} timeout={1000}>
           <Typography
             color="primary"
             variant="button"
@@ -60,9 +46,8 @@ const Services: FC = () => {
         <Grid container>
           <Grid item xs={1} md={3}></Grid>
           <Grid item xs={10} md={6}>
-            <Fade in={inView} timeout={1400}>
+            <Fade in={trigger} timeout={1400}>
               <Typography
-                ref={elementRef}
                 color="primary"
                 variant="caption"
                 textAlign={"center"}
@@ -78,9 +63,9 @@ const Services: FC = () => {
           <Grid item xs={1} md={3}></Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} mt={5} ref={elementRef}>
+      <Grid item xs={12} mt={5}>
         <Grid container>
-          <Fade in={inView} timeout={2000}>
+          <Fade in={trigger} timeout={2000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Personal Training Services"
@@ -88,7 +73,7 @@ const Services: FC = () => {
               />
             </Grid>
           </Fade>
-          <Fade in={inView} timeout={2000}>
+          <Fade in={trigger} timeout={2000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Meditation & Spiritual Health"
@@ -96,7 +81,7 @@ const Services: FC = () => {
               />
             </Grid>
           </Fade>
-          <Fade in={inView} timeout={2000}>
+          <Fade in={trigger} timeout={2000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Nutritional Support "
@@ -104,7 +89,7 @@ const Services: FC = () => {
               />
             </Grid>
           </Fade>
-          <Fade in={inView} timeout={2000}>
+          <Fade in={trigger} timeout={2000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Fighting Lessons"

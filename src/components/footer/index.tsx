@@ -5,6 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
 const Footer = () => {
@@ -94,6 +95,7 @@ const Footer = () => {
                     variant="caption"
                     color="primary.contrastText"
                     textAlign="center"
+                    onClick={scrollElementByIdIntoView("faqs")}
                     width={"100%"}
                   >
                     FAQs
@@ -166,10 +168,31 @@ const Footer = () => {
             xs={12}
             width="100%"
             display="flex"
+            flexDirection="column"
             justifyContent={"center"}
           >
-            <Typography fontSize={11} color="primary.contrastText" pb={1}>
+            <Typography
+              fontSize={11}
+              color="primary.contrastText"
+              textAlign={"center"}
+              width={"100%"}
+            >
               2024 Copyright © Elevate Fitness
+            </Typography>
+            <Typography
+              fontSize={11}
+              color="primary.contrastText"
+              pb={1}
+              textAlign={"center"}
+              width={"100%"}
+            >
+              Created & Distributed by{" "}
+              <Link
+                color="secondary"
+                onClick={() => openURLInNewTab("https://bytestudios.dev")}
+              >
+                ByteStudios
+              </Link>
             </Typography>
           </Grid>
         </Grid>

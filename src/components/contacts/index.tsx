@@ -39,7 +39,7 @@ const Contacts: FC = () => {
       container
       bgcolor={"primary.contrastText"}
       width="100%"
-      py={10}
+      pb={5}
     >
       <Grid
         item
@@ -59,8 +59,8 @@ const Contacts: FC = () => {
             fontWeight={600}
             fontSize={30}
           >
-            Contact&nbsp;
-            <Box sx={{ color: theme.palette.secondary.main }}>US</Box>
+            Still have&nbsp;
+            <Box sx={{ color: theme.palette.secondary.main }}>questions</Box>?
           </Typography>
         </Fade>
         <Grid container>

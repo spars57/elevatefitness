@@ -1,31 +1,18 @@
 import { Box, Button, Fade, Slide, Typography, useTheme } from "@mui/material";
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import source from "../../assets/panoramicgym50.png";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
 const Quote: FC = () => {
-  const [inView, setInView] = useState(false);
-  const elementRef = useRef(null);
   const theme = useTheme();
 
+  const [trigger, setTrigger] = useState(false);
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-      },
-      {
-        root: null, // use the viewport as the container
-        rootMargin: "0px",
-        threshold: 0.1, // Adjust this threshold according to your needs
-      }
-    );
-
-    if (elementRef.current) observer.observe(elementRef.current);
-    return () => {
-      if (elementRef.current) observer.unobserve(elementRef.current);
-    };
-  }, [elementRef]);
+    const handleScroll = () => window.scrollY > 1130 && setTrigger(true);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Box
@@ -41,9 +28,9 @@ const Quote: FC = () => {
       width={"100%"}
       justifyContent={"center"}
     >
-      <Slide in={inView} direction="up" timeout={1000}>
+      <Slide in={trigger} direction="up" timeout={1000}>
         <Typography
-          style={{ display: inView ? "flex" : "none" }}
+          style={{ display: trigger ? "flex" : "none" }}
           variant="button"
           display="flex"
           justifyContent={"center"}
@@ -63,11 +50,13 @@ const Quote: FC = () => {
           <Box sx={{ color: theme.palette.secondary.main }}>TODAY</Box>!
         </Typography>
       </Slide>
-      <Typography textAlign={"center"} width={"100%"} ref={elementRef}>
-        Ut consectetur, metus sit amet aliquet placerat, enim est ultricies
-        ligula
-      </Typography>
-      <Fade in={inView} timeout={2000}>
+      <Fade in={trigger} timeout={2000}>
+        <Typography textAlign={"center"} width={"100%"}>
+          Ut consectetur, metus sit amet aliquet placerat, enim est ultricies
+          ligula
+        </Typography>
+      </Fade>
+      <Fade in={trigger} timeout={2000}>
         <Box mt={3} display="flex" width={"100%"} justifyContent={"center"}>
           <Button
             variant="contained"
