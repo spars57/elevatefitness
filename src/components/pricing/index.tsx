@@ -1,7 +1,6 @@
 import { ArrowForwardIosOutlined } from "@mui/icons-material";
 import {
   Box,
-  Fade,
   Grid,
   List,
   ListItemButton,
@@ -11,16 +10,33 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 import PricingCard from "./card";
 
 const Pricing = () => {
   const theme = useTheme();
 
+  const [trigger, setTrigger] = useState(false);
+  const [triggerItems1, setTriggerItems1] = useState(false);
+  const [triggerItems2, setTriggerItems2] = useState(false);
+  const [triggerItems3, setTriggerItems3] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 1458 && setTrigger(true);
+      window.scrollY > 1700 && setTriggerItems1(true);
+      window.scrollY > 1750 && setTriggerItems2(true);
+      window.scrollY > 1800 && setTriggerItems3(true);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Box id="pricing" bgcolor="primary.contrastText" pt={5} px={2}>
       <Grid container spacing={2}>
-        <Slide in={true} direction="up" timeout={1000}>
+        <Slide in={trigger} direction="down" timeout={1000}>
           <Grid item xs={12}>
             <Typography
               color="primary"
@@ -54,11 +70,11 @@ const Pricing = () => {
           </Grid>
         </Slide>
 
-        <Fade in={true} timeout={1000}>
+        <Slide direction="up" in={triggerItems1} timeout={1000}>
           <Grid item sm={12} md={4}>
             <PricingCard
               title="BASIC"
-              price="$11.99/m"
+              price="$11.99"
               onGetStarted={() =>
                 openURLInNewTab(
                   "https://www.paypal.com/paypalme/tomasathletics"
@@ -88,13 +104,13 @@ const Pricing = () => {
               }
             />
           </Grid>
-        </Fade>
-        <Fade in={true} timeout={1000}>
+        </Slide>
+        <Slide direction="up" in={triggerItems2} timeout={1000}>
           <Grid item sm={12} md={4}>
             <PricingCard
               buttonColor="secondary"
               title="STANDARD"
-              price="$16.99/m"
+              price="$16.99"
               onGetStarted={() =>
                 openURLInNewTab(
                   "https://www.paypal.com/paypalme/tomasathletics"
@@ -124,12 +140,12 @@ const Pricing = () => {
               }
             />
           </Grid>
-        </Fade>
-        <Fade in={true} timeout={1000}>
+        </Slide>
+        <Slide direction="up" in={triggerItems3} timeout={1000}>
           <Grid item sm={12} md={4}>
             <PricingCard
               title="PREMIUM"
-              price="$24.99/m"
+              price="$24.99"
               onGetStarted={() =>
                 openURLInNewTab(
                   "https://www.paypal.com/paypalme/tomasathletics"
@@ -159,7 +175,7 @@ const Pricing = () => {
               }
             />
           </Grid>
-        </Fade>
+        </Slide>
       </Grid>
     </Box>
   );

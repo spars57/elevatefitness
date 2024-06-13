@@ -24,7 +24,7 @@ const PricingCard: FC<Props> = ({
       display="flex"
       flexDirection={"column"}
       sx={{
-        border: `1px solid ${theme.palette.primary.main}`,
+        border: `1px solid ${theme.palette.grey[300]}`,
         borderRadius: 1,
       }}
     >
@@ -43,13 +43,13 @@ const PricingCard: FC<Props> = ({
         <Typography variant="button">What is Included</Typography>
       </Box>
       <Box p={3}>{benefits}</Box>
-      <Box display="flex" justifyContent={"center"}>
+      <Box p={1} display="flex" justifyContent={"center"}>
         <Button
           onClick={onGetStarted}
           variant="contained"
           color={buttonColor}
           fullWidth
-          style={{ padding: 15 }}
+          style={{ padding: 15, fontWeight: "bold" }}
         >
           Get Started!
         </Button>
