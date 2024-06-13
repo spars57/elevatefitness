@@ -64,7 +64,11 @@ const Header: FC = () => {
                 </StyledLink>
               </Box>
               <Box mx={2}>
-                <Button color="secondary" variant="contained">
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  onClick={scrollElementByIdIntoView("pricing")}
+                >
                   Join US
                 </Button>
               </Box>
