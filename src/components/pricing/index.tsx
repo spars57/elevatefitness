@@ -18,7 +18,7 @@ const Pricing = () => {
   const theme = useTheme();
 
   return (
-    <Box id="pricing" bgcolor="primary.contrastText" py={5} px={2}>
+    <Box id="pricing" bgcolor="primary.contrastText" pt={5} px={2}>
       <Grid container spacing={2}>
         <Slide in={true} direction="up" timeout={1000}>
           <Grid item xs={12}>

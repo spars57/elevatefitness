@@ -2,6 +2,7 @@ import { Box, Button, Fade, Slide, Typography, useTheme } from "@mui/material";
 import { FC, useEffect, useRef, useState } from "react";
 
 import source from "../../assets/panoramicgym50.png";
+import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
 const Quote: FC = () => {
   const [inView, setInView] = useState(false);
@@ -68,7 +69,11 @@ const Quote: FC = () => {
       </Typography>
       <Fade in={inView} timeout={2000}>
         <Box mt={3} display="flex" width={"100%"} justifyContent={"center"}>
-          <Button variant="contained" color="secondary">
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={scrollElementByIdIntoView("pricing")}
+          >
             Join US
           </Button>
         </Box>

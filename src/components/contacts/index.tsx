@@ -39,7 +39,7 @@ const Contacts: FC = () => {
       container
       bgcolor={"primary.contrastText"}
       width="100%"
-      py={5}
+      py={10}
     >
       <Grid
         item
