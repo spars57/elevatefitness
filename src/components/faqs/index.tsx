@@ -9,8 +9,10 @@ const FrequentlyAskedQuestions = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 2128 && setTrigger(true);
-      window.scrollY > 2238 && setTriggerItems1(true);
+      const isMobile = window.innerWidth < 900;
+
+      window.scrollY > (isMobile ? 2930 : 2128) && setTrigger(true);
+      window.scrollY > (isMobile ? 2230 : 2238) && setTriggerItems1(true);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

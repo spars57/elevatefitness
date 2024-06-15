@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Pricing from "./components/pricing";
 import Quote from "./components/quote";
+import Reviews from "./components/reviews";
 import Services from "./components/services";
 import StartingVideo from "./components/video";
 
@@ -15,6 +16,7 @@ function App() {
       <StartingVideo />
       <Services />
       <Quote />
+      <Reviews />
       <Pricing />
       <FrequentlyAskedQuestions />
       <Contacts />

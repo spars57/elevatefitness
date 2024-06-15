@@ -39,7 +39,8 @@ const Contacts: FC = () => {
       container
       bgcolor={"primary.contrastText"}
       width="100%"
-      pb={5}
+      pt={5}
+      pb={10}
     >
       <Grid
         item
@@ -96,7 +97,7 @@ const Contacts: FC = () => {
               width={"100%"}
               justifyContent={"center"}
             >
-              <Button variant="contained">Send us an email</Button>
+              <Button variant="contained">Contact our team</Button>
             </Grid>
           </Slide>
         </Grid>

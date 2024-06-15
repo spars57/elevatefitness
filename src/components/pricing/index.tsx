@@ -62,7 +62,8 @@ const Pricing = () => {
                   display="flex"
                   justifyContent={"center"}
                 >
-                  Find the best plan for you.
+                  Find the best plan for you, cancel your subscription at any
+                  time.
                 </Typography>
               </Grid>
               <Grid item xs={1} md={3}></Grid>
