@@ -1,4 +1,4 @@
-import { Box, Fade, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Fade, Grid, Slide, Typography, useTheme } from "@mui/material";
 import { FC, useEffect, useState } from "react";
 import ServiceItem from "./card";
 
@@ -6,8 +6,13 @@ const Services: FC = () => {
   const theme = useTheme();
 
   const [trigger, setTrigger] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+
   useEffect(() => {
-    const handleScroll = () => window.scrollY > 197 && setTrigger(true);
+    const handleScroll = () => {
+      setIsMobile(window.innerWidth < 900);
+      window.scrollY > (isMobile ? 2300 : 1050) && setTrigger(true);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -16,7 +21,7 @@ const Services: FC = () => {
     <Grid
       id="services"
       container
-      bgcolor={"primary.contrastText"}
+      bgcolor={"grey.100"}
       width="100%"
       pt={5}
       pb={10}
@@ -37,7 +42,12 @@ const Services: FC = () => {
             display="flex"
             justifyContent={"center"}
             fontWeight={600}
-            fontSize={30}
+            sx={{
+              typography: {
+                xs: { fontSize: 24 },
+                md: { fontSize: 30 },
+              },
+            }}
           >
             Our&nbsp;
             <Box sx={{ color: theme.palette.secondary.main }}>Services</Box>
@@ -65,38 +75,38 @@ const Services: FC = () => {
       </Grid>
       <Grid item xs={12} mt={5}>
         <Grid container>
-          <Fade in={trigger} timeout={2000}>
+          <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Personal Training Services"
                 content="A professional of our team will guide you through your workout"
               />
             </Grid>
-          </Fade>
-          <Fade in={trigger} timeout={2000}>
+          </Slide>
+          <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Meditation & Spiritual Health"
                 content="A professional of our team will guide you through your workout"
               />
             </Grid>
-          </Fade>
-          <Fade in={trigger} timeout={2000}>
+          </Slide>
+          <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Nutritional Support "
                 content="A professional of our team will guide you through your workout"
               />
             </Grid>
-          </Fade>
-          <Fade in={trigger} timeout={2000}>
+          </Slide>
+          <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
                 title="Fighting Lessons"
                 content="A professional of our team will guide you through your workout"
               />
             </Grid>
-          </Fade>
+          </Slide>
         </Grid>
       </Grid>
     </Grid>

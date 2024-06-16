@@ -26,7 +26,7 @@ const ElevateFitnessTheme = createTheme({
       contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#ce0e2d",
+      main: "#2752D6",
     },
     info: {
       main: "#005cb9",

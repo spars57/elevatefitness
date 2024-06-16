@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import AboutUs from "./components/about-us";
 import Contacts from "./components/contacts";
 import FrequentlyAskedQuestions from "./components/faqs";
 import Footer from "./components/footer";
@@ -9,15 +10,18 @@ import Reviews from "./components/reviews";
 import Services from "./components/services";
 import StartingVideo from "./components/video";
 
+import panoramic from "./assets/panoramicgym50.png";
+
 function App() {
   return (
     <Box overflow="hidden">
       <Header />
       <StartingVideo />
+      <AboutUs />
       <Services />
-      <Quote />
-      <Reviews />
+      <Quote quote={1} src={panoramic} />
       <Pricing />
+      <Reviews />
       <FrequentlyAskedQuestions />
       <Contacts />
       <Footer />

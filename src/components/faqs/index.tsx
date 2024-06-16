@@ -11,8 +11,8 @@ const FrequentlyAskedQuestions = () => {
     const handleScroll = () => {
       const isMobile = window.innerWidth < 900;
 
-      window.scrollY > (isMobile ? 2930 : 2128) && setTrigger(true);
-      window.scrollY > (isMobile ? 2230 : 2238) && setTriggerItems1(true);
+      window.scrollY > (isMobile ? 6900 : 3658) && setTrigger(true);
+      window.scrollY > (isMobile ? 7050 : 3828) && setTriggerItems1(true);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -43,9 +43,10 @@ const FrequentlyAskedQuestions = () => {
               </Typography>
             </Fade>
           </Grid>
-          <Grid item>
+          <Grid item display="flex" width="100%" pb={5}>
             <Fade in={trigger} timeout={1000}>
               <Typography
+                width={"100%"}
                 color="primary"
                 variant="caption"
                 textAlign={"center"}
@@ -53,10 +54,7 @@ const FrequentlyAskedQuestions = () => {
                 display="flex"
                 justifyContent={"center"}
               >
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                Most frequently asked questions from our previous clients.
               </Typography>
             </Fade>
           </Grid>

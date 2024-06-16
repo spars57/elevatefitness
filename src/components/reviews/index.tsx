@@ -21,7 +21,12 @@ const Reviews = () => {
           display="flex"
           justifyContent={"center"}
           fontWeight={300}
-          fontSize={30}
+          sx={{
+            typography: {
+              xs: { fontSize: 24 },
+              md: { fontSize: 30 },
+            },
+          }}
         >
           What our customer's say
         </Typography>

@@ -16,7 +16,7 @@ const Logo: FC<Props> = ({ collapsed = false, ...props }) => {
       sx={{
         typography: {
           xs: {
-            fontSize: 24,
+            fontSize: 20,
           },
           md: {
             fontSize: 30,

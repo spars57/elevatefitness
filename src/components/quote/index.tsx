@@ -1,15 +1,22 @@
 import { Box, Button, Fade, Slide, Typography, useTheme } from "@mui/material";
 import { FC, useEffect, useState } from "react";
 
-import source from "../../assets/panoramicgym50.png";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
-const Quote: FC = () => {
+type Props = {
+  src: string;
+  quote: 1 | 2;
+};
+
+const Quote: FC<Props> = ({ src, quote }) => {
   const theme = useTheme();
 
   const [trigger, setTrigger] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
   useEffect(() => {
-    const handleScroll = () => window.scrollY > 1130 && setTrigger(true);
+    setIsMobile(window.innerWidth < 900);
+    const handleScroll = () =>
+      window.scrollY > (isMobile ? 3378 : 1660) && setTrigger(true);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -19,7 +26,7 @@ const Quote: FC = () => {
       p={5}
       py={20}
       sx={{
-        backgroundImage: `url(${source})`,
+        backgroundImage: `url(${src})`,
         backgroundSize: "cover",
       }}
       display="flex"
@@ -44,10 +51,15 @@ const Quote: FC = () => {
             },
           }}
         >
-          <Box>DON'T</Box>&nbsp;
-          <Box sx={{ color: theme.palette.secondary.main }}>THINK</Box>,&nbsp;
-          <Box>START</Box>&nbsp;
-          <Box sx={{ color: theme.palette.secondary.main }}>TODAY</Box>!
+          {quote == 1 && (
+            <>
+              <Box>DON'T</Box>&nbsp;
+              <Box sx={{ color: theme.palette.secondary.main }}>THINK</Box>
+              ,&nbsp;
+              <Box>START</Box>&nbsp;
+              <Box sx={{ color: theme.palette.secondary.main }}>TODAY</Box>!
+            </>
+          )}
         </Typography>
       </Slide>
       <Fade in={trigger} timeout={2000}>
