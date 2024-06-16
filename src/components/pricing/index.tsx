@@ -102,7 +102,7 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Complete training Plan</ListItemText>
+                        <ListItemText>Workout Guide</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
