@@ -9,6 +9,7 @@ const StartingVideo = () => {
         autoPlay
         muted
         loop
+        playsInline
         id="background"
         style={{
           opacity: 0.9,
