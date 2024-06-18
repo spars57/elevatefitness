@@ -1,1 +1,1 @@
-export const isMobileScreen = () => window.innerWidth < 1200;
+export const isMobileScreen = () => window.innerWidth < 900;

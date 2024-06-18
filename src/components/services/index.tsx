@@ -81,7 +81,7 @@ const Services: FC = () => {
         </Grid>
       </Grid>
       <Grid item xs={12} mt={5}>
-        <Grid container rowGap={isMobileScreen() ? 10 : 1}>
+        <Grid container rowGap={isMobileScreen() ? 2 : 1}>
           <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
