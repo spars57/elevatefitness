@@ -1,6 +1,7 @@
 import { Box, Button, ButtonProps, Typography, useTheme } from "@mui/material";
 import { styled } from "@mui/system";
 import { FC, ReactNode } from "react";
+import { isMobileScreen } from "../../constants";
 
 type Props = {
   title: string;
@@ -31,6 +32,7 @@ const PricingCard: FC<Props> = ({
     <StyledBox
       display="flex"
       flexDirection={"column"}
+      height={isMobileScreen() ? "auto" : 790}
       sx={{
         border: `1px solid ${theme.palette.grey[300]}`,
         borderRadius: 1,
@@ -44,14 +46,19 @@ const PricingCard: FC<Props> = ({
           {price}
         </Typography>
       </Box>
-      <Box display="flex" justifyContent={"center"} p={3}>
+      <Box
+        display="flex"
+        justifyContent={"center"}
+        p={3}
+        height={isMobileScreen() ? "auto" : 350}
+      >
         <Typography variant="caption">{description}</Typography>
       </Box>
       <Box display="flex" justifyContent={"center"} p={1}>
         <Typography variant="button">What is Included</Typography>
       </Box>
       <Box p={3}>{benefits}</Box>
-      <Box p={1} display="flex" justifyContent={"center"}>
+      <Box p={1} display="flex" flexGrow={1} alignItems={"flex-end"}>
         <Button
           onClick={onGetStarted}
           variant="contained"

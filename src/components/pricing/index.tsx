@@ -134,9 +134,7 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>
-                          Remote Assistance through 1:1 calls
-                        </ListItemText>
+                        <ListItemText>1 to 1 Daily Calls</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
@@ -194,9 +192,7 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>
-                          Remote Assistance through 1:1 calls
-                        </ListItemText>
+                        <ListItemText>1 to 1 Daily Calls</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
@@ -252,9 +248,7 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>
-                          Remote Assistance through 1:1 calls
-                        </ListItemText>
+                        <ListItemText>1 to 1 Daily Calls</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
