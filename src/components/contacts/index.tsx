@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { FC, useEffect, useRef, useState } from "react";
+import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 
 const Contacts: FC = () => {
   const theme = useTheme();
@@ -100,7 +101,14 @@ const Contacts: FC = () => {
               width={"100%"}
               justifyContent={"center"}
             >
-              <Button variant="contained">Contact our team</Button>
+              <Button
+                variant="contained"
+                onClick={() =>
+                  openURLInNewTab("https://instagram.com/bytestudios.sda")
+                }
+              >
+                Contact our team
+              </Button>
             </Grid>
           </Slide>
         </Grid>
