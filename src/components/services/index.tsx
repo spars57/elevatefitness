@@ -12,11 +12,9 @@ const Services: FC = () => {
   const theme = useTheme();
 
   const [trigger, setTrigger] = useState(false);
-  const [isMobile, setIsMobile] = useState(isMobileScreen());
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsMobile(isMobileScreen());
       const minScrollY = 286;
       window.scrollY > minScrollY && setTrigger(true);
     };
