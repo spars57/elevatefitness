@@ -342,16 +342,36 @@ const Footer = () => {
             p={1}
             pt={3}
           >
-            <IconButton color="primary">
+            <IconButton
+              color="primary"
+              onClick={() =>
+                openURLInNewTab("https://instagram.com/bytestudios.sda")
+              }
+            >
               <InstagramIcon style={{ filter: "invert(1)" }} />
             </IconButton>
-            <IconButton color="primary">
+            <IconButton
+              color="primary"
+              onClick={() =>
+                openURLInNewTab("https://instagram.com/bytestudios.sda")
+              }
+            >
               <YouTubeIcon style={{ filter: "invert(1)" }} />
             </IconButton>
-            <IconButton color="primary">
+            <IconButton
+              color="primary"
+              onClick={() =>
+                openURLInNewTab("https://instagram.com/bytestudios.sda")
+              }
+            >
               <XIcon style={{ filter: "invert(1)" }} />
             </IconButton>
-            <IconButton color="primary">
+            <IconButton
+              color="primary"
+              onClick={() =>
+                openURLInNewTab("https://instagram.com/bytestudios.sda")
+              }
+            >
               <FacebookIcon style={{ filter: "invert(1)" }} />
             </IconButton>
           </Grid>

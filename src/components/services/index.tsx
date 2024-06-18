@@ -6,14 +6,17 @@ import diet_service from "../../assets/diet_service.webp";
 import fighting_service from "../../assets/fighting_service.webp";
 import gym_service from "../../assets/gym_service.webp";
 import meditation_service from "../../assets/meditation_service.webp";
+import { isMobileScreen } from "../../constants";
 
 const Services: FC = () => {
   const theme = useTheme();
 
   const [trigger, setTrigger] = useState(false);
+  const [isMobile, setIsMobile] = useState(isMobileScreen());
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsMobile(isMobileScreen());
       const minScrollY = 286;
       window.scrollY > minScrollY && setTrigger(true);
     };
@@ -78,7 +81,7 @@ const Services: FC = () => {
         </Grid>
       </Grid>
       <Grid item xs={12} mt={5}>
-        <Grid container>
+        <Grid container rowGap={isMobileScreen() ? 10 : 1}>
           <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
