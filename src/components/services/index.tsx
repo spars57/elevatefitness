@@ -1,6 +1,5 @@
 import { Box, Fade, Grid, Slide, Typography, useTheme } from "@mui/material";
 import { FC, useEffect, useState } from "react";
-import { isMobileScreen } from "../../constants";
 import ServiceItem from "./card";
 
 import diet_service from "../../assets/diet_service.webp";
@@ -12,11 +11,9 @@ const Services: FC = () => {
   const theme = useTheme();
 
   const [trigger, setTrigger] = useState(false);
-  const [isMobile, setIsMobile] = useState(isMobileScreen());
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsMobile(isMobileScreen());
       const minScrollY = 286;
       window.scrollY > minScrollY && setTrigger(true);
     };
