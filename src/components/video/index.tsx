@@ -1,10 +1,11 @@
 import { Box, Button, Fade, Typography } from "@mui/material";
 import video from "../../assets/background_video.mp4";
+import { isMobileScreen } from "../../constants";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
 const StartingVideo = () => {
   return (
-    <Box id="video">
+    <Box id="video" display="flex" height={isMobileScreen() ? 1080 : "auto"}>
       <video
         autoPlay
         muted
@@ -13,7 +14,7 @@ const StartingVideo = () => {
         id="background"
         style={{
           opacity: 0.9,
-          backgroundColor: "black",
+          width: window.innerWidth,
         }}
       >
         <source src={video}></source>
@@ -29,7 +30,7 @@ const StartingVideo = () => {
           position={"absolute"}
           sx={{
             typography: {
-              xs: { top: "47%" },
+              xs: { top: "57%" },
             },
           }}
         >
