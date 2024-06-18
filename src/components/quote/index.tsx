@@ -1,6 +1,7 @@
 import { Box, Button, Fade, Slide, Typography, useTheme } from "@mui/material";
 import { FC, useEffect, useState } from "react";
 
+import { isMobileScreen } from "../../constants";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
 type Props = {
@@ -12,11 +13,13 @@ const Quote: FC<Props> = ({ src, quote }) => {
   const theme = useTheme();
 
   const [trigger, setTrigger] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+
   useEffect(() => {
-    setIsMobile(window.innerWidth < 900);
-    const handleScroll = () =>
-      window.scrollY > (isMobile ? 3378 : 1660) && setTrigger(true);
+    const handleScroll = () => {
+      const isMobile = isMobileScreen();
+      const minScrollY = isMobile ? 1300 : 860;
+      window.scrollY > minScrollY && setTrigger(true);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -53,10 +56,10 @@ const Quote: FC<Props> = ({ src, quote }) => {
         >
           {quote == 1 && (
             <>
-              <Box>DON'T</Box>&nbsp;
-              <Box sx={{ color: theme.palette.secondary.main }}>THINK</Box>
-              ,&nbsp;
               <Box>START</Box>&nbsp;
+              <Box sx={{ color: theme.palette.secondary.main }}>YOUR</Box>
+              ,&nbsp;
+              <Box>JOURNEY</Box>&nbsp;
               <Box sx={{ color: theme.palette.secondary.main }}>TODAY</Box>!
             </>
           )}
@@ -64,12 +67,11 @@ const Quote: FC<Props> = ({ src, quote }) => {
       </Slide>
       <Fade in={trigger} timeout={2000}>
         <Typography textAlign={"center"} width={"100%"}>
-          Ut consectetur, metus sit amet aliquet placerat, enim est ultricies
-          ligula
+          Start working today towards you dream body
         </Typography>
       </Fade>
       <Fade in={trigger} timeout={2000}>
-        <Box mt={3} display="flex" width={"100%"} justifyContent={"center"}>
+        <Box mt={2} display="flex" width={"100%"} justifyContent={"center"}>
           <Button
             variant="contained"
             color="secondary"

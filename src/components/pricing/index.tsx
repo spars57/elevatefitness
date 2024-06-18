@@ -27,8 +27,8 @@ const Pricing = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const minScrollY = 1390;
       const isMobile = isMobileScreen();
+      const minScrollY = isMobile ? 1590 : 1390;
       const increment = isMobile ? 300 : 100;
       setIsMobile(isMobile);
 

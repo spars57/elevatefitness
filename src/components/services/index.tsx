@@ -1,17 +1,24 @@
 import { Box, Fade, Grid, Slide, Typography, useTheme } from "@mui/material";
 import { FC, useEffect, useState } from "react";
+import { isMobileScreen } from "../../constants";
 import ServiceItem from "./card";
+
+import diet_service from "../../assets/diet_service.webp";
+import fighting_service from "../../assets/fighting_service.webp";
+import gym_service from "../../assets/gym_service.webp";
+import meditation_service from "../../assets/meditation_service.webp";
 
 const Services: FC = () => {
   const theme = useTheme();
 
   const [trigger, setTrigger] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+  const [isMobile, setIsMobile] = useState(isMobileScreen());
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsMobile(window.innerWidth < 900);
-      window.scrollY > (isMobile ? 2300 : 1050) && setTrigger(true);
+      setIsMobile(isMobileScreen());
+      const minScrollY = 286;
+      window.scrollY > minScrollY && setTrigger(true);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -78,6 +85,7 @@ const Services: FC = () => {
           <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
+                src={gym_service}
                 title="Personal Training Services"
                 content="A professional of our team will guide you through your workout"
               />
@@ -86,6 +94,7 @@ const Services: FC = () => {
           <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
+                src={meditation_service}
                 title="Meditation & Spiritual Health"
                 content="A professional of our team will guide you through your workout"
               />
@@ -94,7 +103,8 @@ const Services: FC = () => {
           <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
-                title="Nutritional Support "
+                src={diet_service}
+                title="Nutritional Support"
                 content="A professional of our team will guide you through your workout"
               />
             </Grid>
@@ -102,6 +112,7 @@ const Services: FC = () => {
           <Slide direction="right" in={trigger} timeout={1000}>
             <Grid item sm={6}>
               <ServiceItem
+                src={fighting_service}
                 title="Fighting Lessons"
                 content="A professional of our team will guide you through your workout"
               />

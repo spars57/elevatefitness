@@ -1,5 +1,6 @@
 import { Fade, Grid, Slide, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import { isMobileScreen } from "../../constants";
 import { questionsMapper } from "./mapper";
 import FrequentlyAskedQuestion from "./question";
 
@@ -9,10 +10,10 @@ const FrequentlyAskedQuestions = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isMobile = window.innerWidth < 900;
-
-      window.scrollY > (isMobile ? 6900 : 3658) && setTrigger(true);
-      window.scrollY > (isMobile ? 7050 : 3828) && setTriggerItems1(true);
+      const isMobile = isMobileScreen();
+      const minScrollY = isMobile ? 4857 : 3000;
+      window.scrollY > minScrollY && setTrigger(true);
+      window.scrollY > minScrollY + 200 && setTriggerItems1(true);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
