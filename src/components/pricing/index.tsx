@@ -11,26 +11,36 @@ import {
   useTheme,
 } from "@mui/material";
 import { useEffect, useState } from "react";
+import { isMobileScreen } from "../../constants";
 import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 import PricingCard from "./card";
 
 const Pricing = () => {
   const theme = useTheme();
 
-  const [trigger, setTrigger] = useState(false);
+  const [titleTrigger, setTitleTrigger] = useState(false);
   const [triggerItems1, setTriggerItems1] = useState(false);
   const [triggerItems2, setTriggerItems2] = useState(false);
   const [triggerItems3, setTriggerItems3] = useState(false);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+  const [isMobile, setIsMobile] = useState(isMobileScreen());
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsMobile(window.innerWidth < 900);
-      window.scrollY > (!isMobile ? 2143 : 3821) && setTrigger(true);
-      window.scrollY > (!isMobile ? 2385 : 4000) && setTriggerItems1(true);
-      window.scrollY > (!isMobile ? 2435 : 4450) && setTriggerItems2(true);
-      window.scrollY > (!isMobile ? 2485 : 5000) && setTriggerItems3(true);
+      const minScrollY = 1390;
+      const isMobile = isMobileScreen();
+      const increment = isMobile ? 300 : 100;
+      setIsMobile(isMobile);
+
+      const generateIncrement = (i: number) => increment * i;
+
+      window.scrollY > minScrollY && setTitleTrigger(true);
+      window.scrollY > minScrollY + generateIncrement(1) &&
+        setTriggerItems1(true);
+      window.scrollY > minScrollY + generateIncrement(2) &&
+        setTriggerItems2(true);
+      window.scrollY > minScrollY + generateIncrement(3) &&
+        setTriggerItems3(true);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -39,7 +49,7 @@ const Pricing = () => {
   return (
     <Box id="pricing" bgcolor="primary.contrastText" pt={5} pb={10} px={2}>
       <Grid container spacing={2}>
-        <Slide in={trigger} direction="down" timeout={1000}>
+        <Slide in={titleTrigger} direction="down" timeout={1000}>
           <Grid item xs={12}>
             <Typography
               color="primary"
@@ -70,8 +80,13 @@ const Pricing = () => {
                   display="flex"
                   justifyContent={"center"}
                 >
-                  Find the best plan for you, cancel your subscription at any
-                  time.
+                  With ElevateFitness, our highly qualified trainers will get
+                  you there. We can provide a tailored approach that is
+                  specifically designed to help you become healthier and fitter
+                  than ever before! Invest in yourself today and see the results
+                  of having an expert by your side every step of the way. Make
+                  2024 your most successful year yet, and work towards your
+                  dream body.
                 </Typography>
               </Grid>
               <Grid item xs={1} md={3}></Grid>
@@ -89,8 +104,25 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="BASIC"
-                  price="$11.99"
+                  title="Home Conditions Workouts"
+                  price="$24.99"
+                  description={
+                    <>
+                      <b>Duration: 10 days</b>
+                      <p></p>
+                      Communicating 1 on 1 with your personal trainer every day
+                      from day 1 to day 10.
+                      <p></p>
+                      Train with experienced fitness trainers to reach your
+                      individual goals and maximize results through personalized
+                      resistance training.
+                      <p></p>
+                      In this category we will provide a personalized training
+                      program for you which you can do in home conditions
+                      together with the diet plan attached to it, so that you
+                      can be more healthier with your diet too.
+                    </>
+                  }
                   onGetStarted={() =>
                     openURLInNewTab(
                       "https://www.paypal.com/paypalme/tomasathletics"
@@ -102,19 +134,21 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Workout Guide</ListItemText>
+                        <ListItemText>
+                          Remote Assistance through 1:1 calls
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Remote Assistance</ListItemText>
+                        <ListItemText>Custom Workout Plan</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Other Benefits</ListItemText>
+                        <ListItemText>Healthy Diet Program</ListItemText>
                       </ListItemButton>
                     </List>
                   }
@@ -128,9 +162,27 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  buttonColor="secondary"
-                  title="STANDARD"
-                  price="$16.99"
+                  buttonColor="primary"
+                  title="Weighted Home Workouts"
+                  price="$24.99"
+                  description={
+                    <>
+                      <b>Duration: 10 days:</b>
+                      <p></p>
+                      Communicating 1 on 1 with your personal trainer every day
+                      from day 1 to day 10.
+                      <p></p>
+                      Train with experienced fitness trainers to reach your
+                      individual goals and maximize results thorough
+                      personalized resistance training.
+                      <p></p>
+                      In this category we will prepare a personalized training
+                      program for you which you can do in home with some weights
+                      that you might use to level up your body into a whole new
+                      different level, together with the diet plan attached to
+                      it, so that you can be more healthier with your diet too.
+                    </>
+                  }
                   onGetStarted={() =>
                     openURLInNewTab(
                       "https://www.paypal.com/paypalme/tomasathletics"
@@ -142,19 +194,21 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>All Basic Benefits</ListItemText>
+                        <ListItemText>
+                          Remote Assistance through 1:1 calls
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Other Benefits</ListItemText>
+                        <ListItemText>Custom Workout Plan</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Other Benefits</ListItemText>
+                        <ListItemText>Healthy Diet Program</ListItemText>
                       </ListItemButton>
                     </List>
                   }
@@ -168,8 +222,25 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="PREMIUM"
+                  title="Gym Workout Guide"
                   price="$24.99"
+                  description={
+                    <>
+                      <b>Duration: 10 days</b>
+                      <p></p>
+                      Communicating 1 on 1 with your personal trainer every day
+                      from day 1 to day 10.
+                      <p></p>
+                      Increase your strength and endurance through our
+                      customized interval training sessions.
+                      <p></p>
+                      In this category we will prepare a personalized training
+                      program for you which you can do in the gym, so the next
+                      time you go there you know exactly what exercises to do,
+                      together with the diet plan attached to it, so that you
+                      can be more healthier with your diet too.
+                    </>
+                  }
                   onGetStarted={() =>
                     openURLInNewTab(
                       "https://www.paypal.com/paypalme/tomasathletics"
@@ -181,19 +252,21 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>All Standard Benefits</ListItemText>
+                        <ListItemText>
+                          Remote Assistance through 1:1 calls
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Other Benefits</ListItemText>
+                        <ListItemText>Custom Workout Plan</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Other Benefits</ListItemText>
+                        <ListItemText>Healthy Diet Program</ListItemText>
                       </ListItemButton>
                     </List>
                   }

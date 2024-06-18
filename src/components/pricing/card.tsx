@@ -5,7 +5,7 @@ import { FC, ReactNode } from "react";
 type Props = {
   title: string;
   price: string;
-  description?: string;
+  description?: ReactNode;
   benefits: ReactNode;
   buttonColor?: ButtonProps["color"];
   onGetStarted?: () => void;
