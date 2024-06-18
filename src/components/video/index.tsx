@@ -4,7 +4,7 @@ import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 
 const StartingVideo = () => {
   return (
-    <Box id="video" height={1080}>
+    <Box id="video">
       <video
         autoPlay
         muted
@@ -13,7 +13,6 @@ const StartingVideo = () => {
         id="background"
         style={{
           opacity: 0.9,
-          height: 1080,
           backgroundColor: "black",
         }}
       >
