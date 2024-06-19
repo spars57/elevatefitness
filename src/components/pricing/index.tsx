@@ -107,7 +107,7 @@ const Pricing = () => {
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
-                        <b>Duration: 10 days</b>
+                        <b>Duration: 3 weeks</b>
                       </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day
@@ -166,7 +166,7 @@ const Pricing = () => {
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
-                        <b>Duration: 10 days</b>
+                        <b>Duration: 4 weeks</b>
                       </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day
@@ -225,7 +225,7 @@ const Pricing = () => {
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
-                        <b>Duration: 10 days</b>
+                        <b>Duration: 5 weeks</b>
                       </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day
