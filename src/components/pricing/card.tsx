@@ -39,7 +39,7 @@ const PricingCard: FC<Props> = ({
     <StyledBox
       display="flex"
       flexDirection={"column"}
-      height={isMobileScreen() ? "auto" : 790}
+      height={isMobileScreen() ? "auto" : 840}
       sx={{
         border: `1px solid ${theme.palette.grey[300]}`,
         borderRadius: 1,
@@ -57,7 +57,7 @@ const PricingCard: FC<Props> = ({
         display="flex"
         justifyContent={"center"}
         p={3}
-        height={isMobileScreen() ? "auto" : 350}
+        height={isMobileScreen() ? "auto" : 400}
       >
         <Typography variant="caption">{description}</Typography>
       </Box>
