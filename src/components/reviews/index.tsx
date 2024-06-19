@@ -8,11 +8,11 @@ const Reviews = () => {
   return (
     <Grid
       id="reviews"
-      pb={5}
+      pb={10}
       container
       sx={{ backgroundColor: theme.palette.grey[100] }}
     >
-      <Grid item xs={12} py={4}>
+      <Grid item xs={12} py={10}>
         <Typography
           color="primary"
           variant="button"

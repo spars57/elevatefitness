@@ -11,7 +11,7 @@ const FrequentlyAskedQuestions = () => {
   useEffect(() => {
     const handleScroll = () => {
       const isMobile = isMobileScreen();
-      const minScrollY = isMobile ? 4857 : 3000;
+      const minScrollY = isMobile ? 5300 : 3000;
       window.scrollY > minScrollY && setTrigger(true);
       window.scrollY > minScrollY + 200 && setTriggerItems1(true);
     };
@@ -19,7 +19,7 @@ const FrequentlyAskedQuestions = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <Grid py={5} id="faqs" container bgcolor="primary.contrastText">
+    <Grid py={10} id="faqs" container bgcolor="primary.contrastText">
       <Grid item xs={1} md={3}></Grid>
       <Grid item xs={10} md={6}>
         <Grid container>

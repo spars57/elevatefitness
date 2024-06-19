@@ -29,7 +29,7 @@ const Pricing = () => {
     const handleScroll = () => {
       const isMobile = isMobileScreen();
       const minScrollY = isMobile ? 1590 : 1390;
-      const increment = isMobile ? 300 : 100;
+      const increment = isMobile ? 500 : 100;
       setIsMobile(isMobile);
 
       const generateIncrement = (i: number) => increment * i;
@@ -49,8 +49,8 @@ const Pricing = () => {
   return (
     <Box id="pricing" bgcolor="primary.contrastText" pt={5} pb={10} px={2}>
       <Grid container spacing={2}>
-        <Slide in={titleTrigger} direction="down" timeout={1000}>
-          <Grid item xs={12}>
+        <Slide in={titleTrigger} direction="up" timeout={1000}>
+          <Grid item xs={12} py={5}>
             <Typography
               color="primary"
               variant="button"

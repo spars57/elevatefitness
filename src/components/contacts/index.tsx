@@ -35,14 +35,7 @@ const Contacts: FC = () => {
   }, [elementRef]);
 
   return (
-    <Grid
-      id="contacts"
-      container
-      bgcolor={"primary.contrastText"}
-      width="100%"
-      pt={5}
-      pb={10}
-    >
+    <Grid id="contacts" container bgcolor={"grey.100"} width="100%" py={10}>
       <Grid
         item
         xs={12}

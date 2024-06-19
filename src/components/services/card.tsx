@@ -11,7 +11,13 @@ type Props = {
 
 const ServiceItem: FC<Props> = ({ title, content, src }) => {
   return (
-    <Box display="flex" justifyContent={"center"} m={3} height={110}>
+    <Box
+      display="flex"
+      alignItems={"center"}
+      justifyContent={"center"}
+      m={3}
+      height={110}
+    >
       <Box display="flex" alignItems="center" width={110} borderRadius={3}>
         <img src={src} style={{ width: 200 }} />
       </Box>

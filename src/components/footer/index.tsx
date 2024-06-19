@@ -193,7 +193,7 @@ const Footer = () => {
                 color="secondary"
                 onClick={() => openURLInNewTab("https://bytestudios.dev")}
               >
-                ByteStudios
+                Byte&nbsp;Studios
               </Link>{" "}
             </Typography>
           </Grid>
@@ -396,7 +396,7 @@ const Footer = () => {
                 color="secondary"
                 onClick={() => openURLInNewTab("https://bytestudios.dev")}
               >
-                ByteStudios
+                Byte&nbsp;Studios
               </Link>{" "}
             </Typography>
           </Grid>

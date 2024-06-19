@@ -34,6 +34,7 @@ const Services: FC = () => {
       <Grid
         item
         xs={12}
+        py={5}
         display="flex"
         flexDirection={"column"}
         justifyContent={"center"}
@@ -79,40 +80,40 @@ const Services: FC = () => {
         </Grid>
       </Grid>
       <Grid item xs={12} mt={5}>
-        <Grid container rowGap={isMobileScreen() ? 2 : 1}>
+        <Grid container rowGap={isMobileScreen() ? 1 : 1}>
           <Slide direction="right" in={trigger} timeout={1000}>
-            <Grid item sm={6}>
+            <Grid item sm={12} md={6}>
               <ServiceItem
                 src={gym_service}
                 title="Personal Training Services"
-                content="A professional of our team will guide you through your workout"
+                content="This service is available for you at the moment."
               />
             </Grid>
           </Slide>
-          <Slide direction="right" in={trigger} timeout={1000}>
-            <Grid item sm={6}>
+          <Slide direction="right" in={trigger} timeout={1200}>
+            <Grid item sm={12} md={6}>
               <ServiceItem
                 src={meditation_service}
                 title="Meditation & Spiritual Health"
-                content="A professional of our team will guide you through your workout"
+                content="This service is available for you at the moment."
               />
             </Grid>
           </Slide>
-          <Slide direction="right" in={trigger} timeout={1000}>
-            <Grid item sm={6}>
+          <Slide direction="right" in={trigger} timeout={1400}>
+            <Grid item sm={12} md={6}>
               <ServiceItem
                 src={diet_service}
                 title="Nutritional Support"
-                content="A professional of our team will guide you through your workout"
+                content="This service is available for you at the moment."
               />
             </Grid>
           </Slide>
-          <Slide direction="right" in={trigger} timeout={1000}>
-            <Grid item sm={6}>
+          <Slide direction="right" in={trigger} timeout={1600}>
+            <Grid item sm={12} md={6}>
               <ServiceItem
                 src={fighting_service}
                 title="Fighting Lessons"
-                content="A professional of our team will guide you through your workout"
+                content="This service is available for you at the moment."
               />
             </Grid>
           </Slide>
