@@ -15,14 +15,14 @@ type Props = {
 const StyledBox = styled(Box)(({ theme }) => ({
   transition: "border 0.5s, box-shadow 0.5s", // Added transition for box-shadow
   "&:hover": {
-    boxShadow: `0 0 15px ${theme.palette.secondary.main}`, // Added box-shadow for hover state
+    boxShadow: `0 0 10px ${theme.palette.secondary.main}`, // Added box-shadow for hover state
   },
 }));
 
 const StyledButton = styled(Button)(({ theme }) => ({
   transition: "background-color 0.5s",
-  "&:focus": {
-    backgroudColor: theme.palette.secondary.main,
+  "&:hover": {
+    backgroundColor: theme.palette.secondary.main,
   },
 }));
 
