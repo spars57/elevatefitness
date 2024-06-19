@@ -84,9 +84,7 @@ const Pricing = () => {
                   you there. We can provide a tailored approach that is
                   specifically designed to help you become healthier and fitter
                   than ever before! Invest in yourself today and see the results
-                  of having an expert by your side every step of the way. Make
-                  2024 your most successful year yet, and work towards your
-                  dream body.
+                  of having an expert by your side every step of the way.
                 </Typography>
               </Grid>
               <Grid item xs={1} md={3}></Grid>
@@ -104,11 +102,13 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="Home Conditions Workouts"
+                  title="BASIC"
                   price="$24.99"
                   description={
-                    <>
-                      <b>Duration: 10 days</b>
+                    <Box display="flex" flexDirection={"column"}>
+                      <Box display="flex" justifyContent={"center"}>
+                        <b>Duration: 10 days</b>
+                      </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day
                       from day 1 to day 10.
@@ -121,7 +121,7 @@ const Pricing = () => {
                       program for you which you can do in home conditions
                       together with the diet plan attached to it, so that you
                       can be more healthier with your diet too.
-                    </>
+                    </Box>
                   }
                   onGetStarted={() =>
                     openURLInNewTab(
@@ -161,11 +161,13 @@ const Pricing = () => {
               <Grid item sm={12} lg={4}>
                 <PricingCard
                   buttonColor="primary"
-                  title="Weighted Home Workouts"
+                  title="STANDARD"
                   price="$24.99"
                   description={
-                    <>
-                      <b>Duration: 10 days:</b>
+                    <Box display="flex" flexDirection={"column"}>
+                      <Box display="flex" justifyContent={"center"}>
+                        <b>Duration: 10 days</b>
+                      </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day
                       from day 1 to day 10.
@@ -179,7 +181,7 @@ const Pricing = () => {
                       that you might use to level up your body into a whole new
                       different level, together with the diet plan attached to
                       it, so that you can be more healthier with your diet too.
-                    </>
+                    </Box>
                   }
                   onGetStarted={() =>
                     openURLInNewTab(
@@ -218,11 +220,13 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="Gym Workout Guide"
+                  title="PREMIUM"
                   price="$24.99"
                   description={
-                    <>
-                      <b>Duration: 10 days</b>
+                    <Box display="flex" flexDirection={"column"}>
+                      <Box display="flex" justifyContent={"center"}>
+                        <b>Duration: 10 days</b>
+                      </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day
                       from day 1 to day 10.
@@ -235,7 +239,7 @@ const Pricing = () => {
                       time you go there you know exactly what exercises to do,
                       together with the diet plan attached to it, so that you
                       can be more healthier with your diet too.
-                    </>
+                    </Box>
                   }
                   onGetStarted={() =>
                     openURLInNewTab(
