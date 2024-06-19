@@ -103,7 +103,7 @@ const Pricing = () => {
               <Grid item sm={12} lg={4}>
                 <PricingCard
                   title="BASIC"
-                  price="$24.99"
+                  price="$49.99"
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
@@ -134,7 +134,7 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>1 to 1 Daily Calls</ListItemText>
+                        <ListItemText>Daily Consultation</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
@@ -162,7 +162,7 @@ const Pricing = () => {
                 <PricingCard
                   buttonColor="primary"
                   title="STANDARD"
-                  price="$24.99"
+                  price="$89.99"
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
@@ -194,7 +194,7 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>1 to 1 Daily Calls</ListItemText>
+                        <ListItemText>Daily Consultation</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>
@@ -221,7 +221,7 @@ const Pricing = () => {
               <Grid item sm={12} lg={4}>
                 <PricingCard
                   title="PREMIUM"
-                  price="$24.99"
+                  price="$124.99"
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
@@ -252,7 +252,7 @@ const Pricing = () => {
                         <ListItemIcon>
                           <ArrowForwardIosOutlined fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>1 to 1 Daily Calls</ListItemText>
+                        <ListItemText>Daily Consultation</ListItemText>
                       </ListItemButton>
                       <ListItemButton>
                         <ListItemIcon>

@@ -19,6 +19,13 @@ const StyledBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+const StyledButton = styled(Button)(({ theme }) => ({
+  transition: "background-color 0.5s",
+  "&:focus": {
+    backgroudColor: theme.palette.secondary.main,
+  },
+}));
+
 const PricingCard: FC<Props> = ({
   title,
   price,
@@ -59,7 +66,7 @@ const PricingCard: FC<Props> = ({
       </Box>
       <Box p={3}>{benefits}</Box>
       <Box p={1} display="flex" flexGrow={1} alignItems={"flex-end"}>
-        <Button
+        <StyledButton
           onClick={onGetStarted}
           variant="contained"
           color={buttonColor}
@@ -67,7 +74,7 @@ const PricingCard: FC<Props> = ({
           style={{ padding: 15, fontWeight: "bold" }}
         >
           Get Started!
-        </Button>
+        </StyledButton>
       </Box>
     </StyledBox>
   );
