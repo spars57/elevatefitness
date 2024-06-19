@@ -48,9 +48,9 @@ const Quote: FC<Props> = ({ src, quote }) => {
           width={"100%"}
           sx={{
             typography: {
-              xs: { fontSize: 25 },
-              sm: { fontSize: 40 },
-              md: { fontSize: 60 },
+              xs: { fontSize: 20 },
+              sm: { fontSize: 30 },
+              md: { fontSize: 40 },
             },
           }}
         >
