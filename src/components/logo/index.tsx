@@ -1,5 +1,6 @@
-import { Box, Typography, TypographyProps, useTheme } from "@mui/material";
+import { Typography, TypographyProps, useTheme } from "@mui/material";
 import { FC } from "react";
+import logo from "../../assets/1000020476.png";
 
 interface Props extends TypographyProps {
   collapsed?: boolean;
@@ -25,13 +26,7 @@ const Logo: FC<Props> = ({ collapsed = false, ...props }) => {
       }}
       {...props}
     >
-      <Box sx={{ color: theme.palette.primary.contrastText }}>
-        {collapsed ? "E" : "ELEVATE"}
-      </Box>
-      &nbsp;
-      <Box sx={{ color: theme.palette.secondary.main }}>
-        {collapsed ? "F" : "FITNESS"}
-      </Box>
+      <img width={77} src={logo}></img>
     </Typography>
   );
 };

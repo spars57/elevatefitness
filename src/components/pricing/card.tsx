@@ -1,11 +1,11 @@
 import { Box, Button, ButtonProps, Typography, useTheme } from "@mui/material";
 import { styled } from "@mui/system";
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 
 type Props = {
   title: string;
   price: string;
-  description?: string;
+  description?: ReactNode;
   benefits: ReactNode;
   buttonColor?: ButtonProps["color"];
   onGetStarted?: () => void;
@@ -27,6 +27,14 @@ const PricingCard: FC<Props> = ({
   onGetStarted = () => null,
 }) => {
   const theme = useTheme();
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+  useEffect(() => {
+    const handleScroll = () => setIsMobile(window.innerWidth < 900);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <StyledBox
       display="flex"
@@ -35,6 +43,7 @@ const PricingCard: FC<Props> = ({
         border: `1px solid ${theme.palette.grey[300]}`,
         borderRadius: 1,
       }}
+      height={isMobile ? "auto" : 800}
     >
       <Box display="flex" justifyContent={"center"} p={1}>
         <Typography variant="button">{title}</Typography>
@@ -44,20 +53,25 @@ const PricingCard: FC<Props> = ({
           {price}
         </Typography>
       </Box>
-      <Box display="flex" justifyContent={"center"} p={3}>
+      <Box
+        display="flex"
+        justifyContent={"center"}
+        p={3}
+        height={isMobile ? "auto" : 350}
+      >
         <Typography variant="caption">{description}</Typography>
       </Box>
       <Box display="flex" justifyContent={"center"} p={1}>
         <Typography variant="button">What is Included</Typography>
       </Box>
       <Box p={3}>{benefits}</Box>
-      <Box p={1} display="flex" justifyContent={"center"}>
+      <Box p={1} display="flex" flexGrow={1} alignItems={"flex-end"}>
         <Button
           onClick={onGetStarted}
           variant="contained"
           color={buttonColor}
           fullWidth
-          style={{ padding: 15, fontWeight: "bold" }}
+          style={{ padding: 15, fontWeight: "bold", height: 60 }}
         >
           Get Started!
         </Button>

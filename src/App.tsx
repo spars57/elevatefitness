@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import AboutUs from "./components/about-us";
 import Contacts from "./components/contacts";
 import FrequentlyAskedQuestions from "./components/faqs";
 import Footer from "./components/footer";
@@ -17,7 +16,6 @@ function App() {
     <Box overflow="hidden">
       <Header />
       <StartingVideo />
-      <AboutUs />
       <Services />
       <Quote quote={1} src={panoramic} />
       <Pricing />

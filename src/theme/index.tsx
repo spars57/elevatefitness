@@ -21,7 +21,7 @@ const ElevateFitnessTheme = createTheme({
   },
   palette: {
     primary: {
-      main: "#000000",
+      main: "#080120",
       light: "#24272a",
       contrastText: "#FFFFFF",
     },

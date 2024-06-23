@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography, useTheme } from "@mui/material";
 import Logo from "../logo";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -10,8 +10,9 @@ import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 import Link from "../link";
 
 const Footer = () => {
+  const theme = useTheme();
   return (
-    <Box>
+    <Box bgcolor={theme.palette.primary.main}>
       {/*For phone*/}
       <Box sx={{ display: { xs: "flex", md: "none" } }}>
         <Grid container>
@@ -200,6 +201,7 @@ const Footer = () => {
         </Grid>
       </Box>
       <Box
+        bgcolor={theme.palette.primary.main}
         sx={{ display: { xs: "none", md: "flex" } }}
         width="100%"
         justifyContent="center"

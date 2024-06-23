@@ -16,16 +16,9 @@ const Contacts: FC = () => {
   const elementRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-      },
-      {
-        root: null, // use the viewport as the container
-        rootMargin: "0px",
-        threshold: 0.1, // Adjust this threshold according to your needs
-      }
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      setInView(entry.isIntersecting);
+    }, {});
 
     if (elementRef.current) observer.observe(elementRef.current);
     return () => {

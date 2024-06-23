@@ -53,19 +53,17 @@ const Quote: FC<Props> = ({ src, quote }) => {
         >
           {quote == 1 && (
             <>
-              <Box>DON'T</Box>&nbsp;
-              <Box sx={{ color: theme.palette.secondary.main }}>THINK</Box>
-              ,&nbsp;
               <Box>START</Box>&nbsp;
-              <Box sx={{ color: theme.palette.secondary.main }}>TODAY</Box>!
+              <Box sx={{ color: theme.palette.secondary.main }}>YOUR</Box>
+              &nbsp;
+              <Box>JOURNEY</Box>
             </>
           )}
         </Typography>
       </Slide>
       <Fade in={trigger} timeout={2000}>
         <Typography textAlign={"center"} width={"100%"}>
-          Ut consectetur, metus sit amet aliquet placerat, enim est ultricies
-          ligula
+          Get started today and get your dream body in less than 3 months.
         </Typography>
       </Fade>
       <Fade in={trigger} timeout={2000}>

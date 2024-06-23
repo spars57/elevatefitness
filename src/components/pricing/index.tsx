@@ -26,11 +26,18 @@ const Pricing = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsMobile(window.innerWidth < 900);
-      window.scrollY > (!isMobile ? 2143 : 3821) && setTrigger(true);
-      window.scrollY > (!isMobile ? 2385 : 4000) && setTriggerItems1(true);
-      window.scrollY > (!isMobile ? 2435 : 4450) && setTriggerItems2(true);
-      window.scrollY > (!isMobile ? 2485 : 5000) && setTriggerItems3(true);
+      const isMobile = window.innerWidth < 900;
+      const triggeringPoint = 1250;
+      const increment = isMobile ? 242 : 100;
+
+      setIsMobile(isMobile);
+
+      window.scrollY > triggeringPoint && setTrigger(true);
+      window.scrollY > triggeringPoint + increment && setTriggerItems1(true);
+      window.scrollY > triggeringPoint + increment * 2 &&
+        setTriggerItems2(true);
+      window.scrollY > triggeringPoint + increment * 3 &&
+        setTriggerItems3(true);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -89,11 +96,28 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="BASIC"
-                  price="$11.99"
+                  title="GYM WORKOUT GUIDE"
+                  price="$24.99"
+                  description={
+                    <>
+                      <b>Duration: 10 days</b>
+                      <p></p>
+                      Communicating 1 on 1 with your personal trainer every day
+                      from day 1 to day 10.
+                      <p></p>
+                      Increase your strength and endurance through our
+                      customized interval training sessions.
+                      <p></p>
+                      In this category we will prepare a personalized training
+                      program for you which you can do in the gym, so the next
+                      time you go there you know exactly what exercises to do,
+                      together with the diet plan attached to it, so that you
+                      can be more healthier with your diet too.
+                    </>
+                  }
                   onGetStarted={() =>
                     openURLInNewTab(
-                      "https://www.paypal.com/paypalme/tomasathletics"
+                      "https://www.paypal.com/paypalme/tomasathletics",
                     )
                   }
                   benefits={
@@ -128,12 +152,27 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  buttonColor="secondary"
-                  title="STANDARD"
-                  price="$16.99"
+                  buttonColor="primary"
+                  title="HOME WORKOUTS"
+                  description={
+                    <>
+                      <b>Duration: 10 days</b>
+                      <p></p>Communicating 1 on 1 with your personal trainer
+                      every day from day 1 to day 10.<p></p>
+                      Train with experienced fitness trainers to reach your
+                      individual goals and maximize results through personalized
+                      resistance training.
+                      <p></p>
+                      In this category we will provide a personalized training
+                      program for you which you can do in home conditions
+                      together with the diet plan attached to it, so that you
+                      can be more healthier with your diet too.
+                    </>
+                  }
+                  price="$24.99"
                   onGetStarted={() =>
                     openURLInNewTab(
-                      "https://www.paypal.com/paypalme/tomasathletics"
+                      "https://www.paypal.com/paypalme/tomasathletics",
                     )
                   }
                   benefits={
@@ -168,11 +207,26 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="PREMIUM"
+                  title="Weighted Home Workouts"
+                  description={
+                    <>
+                      <b>Duration: 10 days</b>
+                      <p></p>Communicating 1 on 1 with your personal trainer
+                      every day from day 1 to day 10.<p></p>
+                      Train with experienced fitness trainers to reach your
+                      individual goals and maximize results thorough
+                      personalized resistance training. <p></p> In this category
+                      we will prepare a personalized training program for you
+                      which you can do in home with some weights that you might
+                      use to level up your body into a whole new different
+                      level, together with the diet plan attached to it, so that
+                      you can be more healthier with your diet too.
+                    </>
+                  }
                   price="$24.99"
                   onGetStarted={() =>
                     openURLInNewTab(
-                      "https://www.paypal.com/paypalme/tomasathletics"
+                      "https://www.paypal.com/paypalme/tomasathletics",
                     )
                   }
                   benefits={
