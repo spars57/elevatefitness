@@ -6,7 +6,7 @@ interface Props extends TypographyProps {
   collapsed?: boolean;
 }
 
-const Logo: FC<Props> = ({ collapsed = false, ...props }) => {
+const Logo: FC<Props> = () => {
   return <img src={logo} width={78}></img>;
 };
 
