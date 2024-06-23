@@ -96,8 +96,8 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="GYM WORKOUT GUIDE"
-                  price="$24.99"
+                  title="Basic"
+                  price="$49.99"
                   description={
                     <>
                       <b>Duration: 10 days</b>
@@ -117,7 +117,7 @@ const Pricing = () => {
                   }
                   onGetStarted={() =>
                     openURLInNewTab(
-                      "https://www.paypal.com/paypalme/tomasathletics",
+                      "https://www.paypal.com/paypalme/tomasathletics"
                     )
                   }
                   benefits={
@@ -153,7 +153,7 @@ const Pricing = () => {
               <Grid item sm={12} lg={4}>
                 <PricingCard
                   buttonColor="primary"
-                  title="HOME WORKOUTS"
+                  title="Standard"
                   description={
                     <>
                       <b>Duration: 10 days</b>
@@ -169,10 +169,10 @@ const Pricing = () => {
                       can be more healthier with your diet too.
                     </>
                   }
-                  price="$24.99"
+                  price="$89.99"
                   onGetStarted={() =>
                     openURLInNewTab(
-                      "https://www.paypal.com/paypalme/tomasathletics",
+                      "https://www.paypal.com/paypalme/tomasathletics"
                     )
                   }
                   benefits={
@@ -207,7 +207,7 @@ const Pricing = () => {
             >
               <Grid item sm={12} lg={4}>
                 <PricingCard
-                  title="Weighted Home Workouts"
+                  title="Premium"
                   description={
                     <>
                       <b>Duration: 10 days</b>
@@ -223,10 +223,10 @@ const Pricing = () => {
                       you can be more healthier with your diet too.
                     </>
                   }
-                  price="$24.99"
+                  price="$124.99"
                   onGetStarted={() =>
                     openURLInNewTab(
-                      "https://www.paypal.com/paypalme/tomasathletics",
+                      "https://www.paypal.com/paypalme/tomasathletics"
                     )
                   }
                   benefits={

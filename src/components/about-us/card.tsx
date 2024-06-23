@@ -1,6 +1,7 @@
 import { Facebook, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { FC, ReactNode } from "react";
+import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 
 type Props = {
   img?: string;
@@ -62,7 +63,12 @@ export const AboutUsCard: FC<Props> = ({
           <IconButton size="small">
             <Facebook fontSize="small" />
           </IconButton>
-          <IconButton size="small">
+          <IconButton
+            size="small"
+            onClick={() =>
+              openURLInNewTab("https://instagram.com/elevatefitnes_")
+            }
+          >
             <Instagram fontSize="small" />
           </IconButton>
           <IconButton size="small">

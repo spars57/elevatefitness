@@ -152,7 +152,12 @@ const Footer = () => {
             xs={12}
             p={1}
           >
-            <IconButton color="primary">
+            <IconButton
+              onClick={() =>
+                openURLInNewTab("https://instagram.com/elevatefitnes_")
+              }
+              color="primary"
+            >
               <InstagramIcon style={{ filter: "invert(1)" }} />
             </IconButton>
             <IconButton color="primary">
@@ -344,7 +349,12 @@ const Footer = () => {
             p={1}
             pt={3}
           >
-            <IconButton color="primary">
+            <IconButton
+              onClick={() =>
+                openURLInNewTab("https://instagram.com/elevatefitnes_")
+              }
+              color="primary"
+            >
               <InstagramIcon style={{ filter: "invert(1)" }} />
             </IconButton>
             <IconButton color="primary">
