@@ -360,30 +360,6 @@ const Footer = () => {
             >
               <InstagramIcon style={{ filter: "invert(1)" }} />
             </IconButton>
-            <IconButton
-              color="primary"
-              onClick={() =>
-                openURLInNewTab("https://instagram.com/bytestudios.sda")
-              }
-            >
-              <YouTubeIcon style={{ filter: "invert(1)" }} />
-            </IconButton>
-            <IconButton
-              color="primary"
-              onClick={() =>
-                openURLInNewTab("https://instagram.com/bytestudios.sda")
-              }
-            >
-              <XIcon style={{ filter: "invert(1)" }} />
-            </IconButton>
-            <IconButton
-              color="primary"
-              onClick={() =>
-                openURLInNewTab("https://instagram.com/bytestudios.sda")
-              }
-            >
-              <FacebookIcon style={{ filter: "invert(1)" }} />
-            </IconButton>
           </Grid>
 
           <Grid
