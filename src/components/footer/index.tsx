@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography, useTheme } from "@mui/material";
 import Logo from "../logo";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -10,10 +10,14 @@ import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 import Link from "../link";
 
 const Footer = () => {
+  const theme = useTheme();
   return (
     <Box>
       {/*For phone*/}
-      <Box sx={{ display: { xs: "flex", md: "none" } }}>
+      <Box
+        bgcolor={theme.palette.primary.main}
+        sx={{ display: { xs: "flex", md: "none" } }}
+      >
         <Grid container>
           <Grid
             item
@@ -151,7 +155,12 @@ const Footer = () => {
             xs={12}
             p={1}
           >
-            <IconButton color="primary">
+            <IconButton
+              onClick={() =>
+                openURLInNewTab("https://instagram.com/elevatefitnes_")
+              }
+              color="primary"
+            >
               <InstagramIcon style={{ filter: "invert(1)" }} />
             </IconButton>
             <IconButton color="primary">
@@ -200,6 +209,7 @@ const Footer = () => {
         </Grid>
       </Box>
       <Box
+        bgcolor={theme.palette.primary.main}
         sx={{ display: { xs: "none", md: "flex" } }}
         width="100%"
         justifyContent="center"
@@ -343,10 +353,10 @@ const Footer = () => {
             pt={3}
           >
             <IconButton
-              color="primary"
               onClick={() =>
-                openURLInNewTab("https://instagram.com/bytestudios.sda")
+                openURLInNewTab("https://instagram.com/elevatefitnes_")
               }
+              color="primary"
             >
               <InstagramIcon style={{ filter: "invert(1)" }} />
             </IconButton>
