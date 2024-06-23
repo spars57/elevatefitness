@@ -71,7 +71,7 @@ const StartingVideo = () => {
           </Typography>
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             onClick={scrollElementByIdIntoView("pricing")}
           >
             Become a Member

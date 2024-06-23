@@ -1,10 +1,7 @@
 import { Box, Grid, IconButton, Typography, useTheme } from "@mui/material";
 import Logo from "../logo";
 
-import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 import Link from "../link";
@@ -162,15 +159,6 @@ const Footer = () => {
               color="primary"
             >
               <InstagramIcon style={{ filter: "invert(1)" }} />
-            </IconButton>
-            <IconButton color="primary">
-              <YouTubeIcon style={{ filter: "invert(1)" }} />
-            </IconButton>
-            <IconButton color="primary">
-              <XIcon style={{ filter: "invert(1)" }} />
-            </IconButton>
-            <IconButton color="primary">
-              <FacebookIcon style={{ filter: "invert(1)" }} />
             </IconButton>
           </Grid>
           <Grid
