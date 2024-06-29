@@ -15,12 +15,14 @@ const Services: FC = () => {
   const [trigger, setTrigger] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const minScrollY = 286;
-      window.scrollY > minScrollY && setTrigger(true);
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setTrigger(true);
+    });
+
+    if (ref.current) observer.observe(ref.current);
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, [ref]);
 
   return (

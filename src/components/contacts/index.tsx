@@ -8,7 +8,6 @@ import {
   useTheme,
 } from "@mui/material";
 import { FC, useEffect, useRef, useState } from "react";
-import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 
 const Contacts: FC = () => {
   const theme = useTheme();
@@ -94,13 +93,13 @@ const Contacts: FC = () => {
               width={"100%"}
               justifyContent={"center"}
             >
-              <Button
-                variant="contained"
-                onClick={() =>
-                  openURLInNewTab("https://instagram.com/bytestudios.sda")
-                }
-              >
-                Contact our team
+              <Button variant="contained">
+                <a
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="mailto:tomas.frasheri@gmail.com?subject=I%20want%20to%20join%20the%20group!&body=Before%20sending%20the%20email%20please%20answer%20this%20questions%3A%0D%0A%0D%0AWhat%20is%20your%20name%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AWhat%20is%20your%20nationality%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AWhat%20is%20your%20phone%20number%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AWhat%20is%20your%20age%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AWhat%20is%20your%20weight%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AWhat%20is%20your%20height%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AWhat%20is%20the%20health%20situation%20that%20you%20are%20currently%20in%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AWhat%20types%20of%20goals%20do%20you%20want%20to%20achieve%20by%20pursuing%20this%20coaching%20program%3F%0D%0A%0D%0AR%3A%0D%0A%0D%0AThank%20you%20for%20reaching%20us%2C%20after%20sending%20this%20email%20a%20team%20member%20will%20contact%20you!"
+                >
+                  Contact our team
+                </a>
               </Button>
             </Grid>
           </Slide>
