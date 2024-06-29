@@ -10,6 +10,7 @@ import Services from "./components/services";
 import StartingVideo from "./components/video";
 
 import panoramic from "./assets/panoramicgym50.png";
+import ClientResults from "./components/client-results";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Services />
       <Quote quote={1} src={panoramic} />
       <Pricing />
+      <ClientResults />
       <Reviews />
       <FrequentlyAskedQuestions />
       <Contacts />
