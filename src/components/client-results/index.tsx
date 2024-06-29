@@ -30,7 +30,17 @@ const ClientResults = () => {
           display="flex"
           justifyContent={"space-between"}
         >
-          <Grid display="flex" justifyContent={"center"} item xs={12} md={6}>
+          <Grid justifyContent={"center"} item xs={12} md={6}>
+            <Typography
+              py={2}
+              display={isMobileScreen() ? "flex" : "block"}
+              justifyContent={isMobileScreen() ? "center" : "left"}
+              textAlign={isMobileScreen() ? "center" : "left"}
+              variant="h4"
+              color="primary.contrastText"
+            >
+              Daniel
+            </Typography>
             <img src={Daniel} width="100%" />
           </Grid>
           <Grid
@@ -46,16 +56,7 @@ const ClientResults = () => {
                 display={isMobileScreen() ? "flex" : "block"}
                 justifyContent={isMobileScreen() ? "center" : "left"}
                 textAlign={isMobileScreen() ? "center" : "left"}
-                variant="h4"
-                color="primary.contrastText"
-              >
-                Daniel
-              </Typography>
-              <Typography
-                display={isMobileScreen() ? "flex" : "block"}
-                justifyContent={isMobileScreen() ? "center" : "left"}
-                textAlign={isMobileScreen() ? "center" : "left"}
-                mt={3}
+                mt={1}
                 variant="body1"
                 color="primary.contrastText"
               >
@@ -67,7 +68,17 @@ const ClientResults = () => {
             </Box>
           </Grid>
           <Grid item xs={12} py={2}></Grid>
-          <Grid display="flex" justifyContent={"center"} item xs={12} md={6}>
+          <Grid justifyContent={"center"} item xs={12} md={6}>
+            <Typography
+              py={2}
+              display={isMobileScreen() ? "flex" : "block"}
+              justifyContent={isMobileScreen() ? "center" : "left"}
+              textAlign={isMobileScreen() ? "center" : "left"}
+              variant="h4"
+              color="primary.contrastText"
+            >
+              Andrea
+            </Typography>
             <img src={Andrea} width="100%" />
           </Grid>
           <Grid
@@ -83,16 +94,7 @@ const ClientResults = () => {
                 display={isMobileScreen() ? "flex" : "block"}
                 justifyContent={isMobileScreen() ? "center" : "left"}
                 textAlign={isMobileScreen() ? "center" : "left"}
-                variant="h4"
-                color="primary.contrastText"
-              >
-                Andrea
-              </Typography>
-              <Typography
-                display={isMobileScreen() ? "flex" : "block"}
-                justifyContent={isMobileScreen() ? "center" : "left"}
-                textAlign={isMobileScreen() ? "center" : "left"}
-                mt={3}
+                mt={1}
                 variant="body1"
                 color="primary.contrastText"
               >
@@ -104,7 +106,17 @@ const ClientResults = () => {
             </Box>
           </Grid>
           <Grid item xs={12} py={2}></Grid>
-          <Grid display="flex" justifyContent={"center"} item xs={12} md={6}>
+          <Grid justifyContent={"center"} item xs={12} md={6}>
+            <Typography
+              py={2}
+              display={isMobileScreen() ? "flex" : "block"}
+              justifyContent={isMobileScreen() ? "center" : "left"}
+              textAlign={isMobileScreen() ? "center" : "left"}
+              variant="h4"
+              color="primary.contrastText"
+            >
+              Emily
+            </Typography>
             <img src={Emily} width="100%" />
           </Grid>
           <Grid
@@ -120,16 +132,7 @@ const ClientResults = () => {
                 display={isMobileScreen() ? "flex" : "block"}
                 justifyContent={isMobileScreen() ? "center" : "left"}
                 textAlign={isMobileScreen() ? "center" : "left"}
-                variant="h4"
-                color="primary.contrastText"
-              >
-                Emily
-              </Typography>
-              <Typography
-                display={isMobileScreen() ? "flex" : "block"}
-                justifyContent={isMobileScreen() ? "center" : "left"}
-                textAlign={isMobileScreen() ? "center" : "left"}
-                mt={3}
+                mt={1}
                 variant="body1"
                 color="primary.contrastText"
               >
@@ -141,7 +144,17 @@ const ClientResults = () => {
             </Box>
           </Grid>
           <Grid item xs={12} py={2}></Grid>
-          <Grid display="flex" justifyContent={"center"} item xs={12} md={6}>
+          <Grid justifyContent={"center"} item xs={12} md={6}>
+            <Typography
+              py={2}
+              display={isMobileScreen() ? "flex" : "block"}
+              justifyContent={isMobileScreen() ? "center" : "left"}
+              textAlign={isMobileScreen() ? "center" : "left"}
+              variant="h4"
+              color="primary.contrastText"
+            >
+              Benjamim
+            </Typography>
             <img src={Benjamim} width="100%" />
           </Grid>
           <Grid
@@ -157,16 +170,7 @@ const ClientResults = () => {
                 display={isMobileScreen() ? "flex" : "block"}
                 justifyContent={isMobileScreen() ? "center" : "left"}
                 textAlign={isMobileScreen() ? "center" : "left"}
-                variant="h4"
-                color="primary.contrastText"
-              >
-                Benjamim
-              </Typography>
-              <Typography
-                display={isMobileScreen() ? "flex" : "block"}
-                justifyContent={isMobileScreen() ? "center" : "left"}
-                textAlign={isMobileScreen() ? "center" : "left"}
-                mt={3}
+                mt={1}
                 variant="body1"
                 color="primary.contrastText"
               >
