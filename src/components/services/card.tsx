@@ -1,7 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import { FC, ReactNode } from "react";
-import scrollElementByIdIntoView from "../../utils/scroll-into-view";
-import { StyledLink } from "../header/styles";
 
 type Props = {
   title: string;
@@ -24,15 +22,6 @@ const ServiceItem: FC<Props> = ({ title, content, src }) => {
       <Box ml={15}>
         <Typography variant="h6">{title}</Typography>
         <Typography variant="body2">{content}</Typography>
-        <Box mt={0.5}>
-          <StyledLink
-            onClick={scrollElementByIdIntoView("video")}
-            variant="button"
-            color="secondary"
-          >
-            DISCOVER MORE
-          </StyledLink>
-        </Box>
       </Box>
     </Box>
   );
