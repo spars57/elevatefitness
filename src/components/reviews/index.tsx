@@ -1,5 +1,4 @@
-import { Button, Container, Grid, Typography, useTheme } from "@mui/material";
-import scrollElementByIdIntoView from "../../utils/scroll-into-view";
+import { Container, Grid, Typography, useTheme } from "@mui/material";
 import ReviewCard from "./card";
 
 const Reviews = () => {
@@ -54,15 +53,6 @@ const Reviews = () => {
             </Grid>
           </Grid>
         </Container>
-      </Grid>
-
-      <Grid pt={3} display="flex" justifyContent={"center"} item xs={12}>
-        <Button
-          variant="contained"
-          onClick={scrollElementByIdIntoView("video")}
-        >
-          Discover More
-        </Button>
       </Grid>
     </Grid>
   );
