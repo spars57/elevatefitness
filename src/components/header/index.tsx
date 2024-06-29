@@ -7,6 +7,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { FC, useEffect, useState } from "react";
+import { openURLInNewTab } from "../../utils/open-url-in-new-window";
 import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 import Link from "../link";
 import Logo from "../logo";
@@ -76,7 +77,10 @@ const Header: FC = () => {
                 <Button
                   color="secondary"
                   variant="contained"
-                  onClick={scrollElementByIdIntoView("pricing")}
+                  onClick={() => {
+                    scrollElementByIdIntoView("pricing")();
+                    openURLInNewTab("https://www.google.com");
+                  }}
                 >
                   Join US
                 </Button>
