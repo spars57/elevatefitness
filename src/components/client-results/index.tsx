@@ -1,9 +1,7 @@
 import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 
 import Andrea from "../../assets/results/andrea-results.jpg";
-import Benjamim from "../../assets/results/benjamin-results.jpg";
 import Daniel from "../../assets/results/daniel-results.jpg";
-import Emily from "../../assets/results/emily-results.jpg";
 
 import { isMobileScreen } from "../../constants";
 
@@ -102,83 +100,6 @@ const ClientResults = () => {
                 lost 30 pounds, built muscle, and achieved a defined six-pack.
                 Andreas' rapid transformation highlights the effectiveness of a
                 structured diet and an effective workout routine.
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} py={2}></Grid>
-          <Grid justifyContent={"center"} item xs={12} md={6}>
-            <Typography
-              py={2}
-              display={isMobileScreen() ? "flex" : "block"}
-              justifyContent={isMobileScreen() ? "center" : "left"}
-              textAlign={isMobileScreen() ? "center" : "left"}
-              variant="h4"
-              color="primary.contrastText"
-            >
-              Emily
-            </Typography>
-            <img src={Emily} width="100%" />
-          </Grid>
-          <Grid
-            display="flex"
-            alignItems={"center"}
-            width="100%"
-            item
-            xs={12}
-            md={6}
-          >
-            <Box>
-              <Typography
-                display={isMobileScreen() ? "flex" : "block"}
-                justifyContent={isMobileScreen() ? "center" : "left"}
-                textAlign={isMobileScreen() ? "center" : "left"}
-                mt={1}
-                variant="body1"
-                color="primary.contrastText"
-              >
-                Within 5 weeks, Emily transformed her body too, by just simply
-                following our fitness advices. She lost 14 pounds, built muscle,
-                and lowered her body far percentage by 2-3%, she's only 32 years
-                old.
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} py={2}></Grid>
-          <Grid justifyContent={"center"} item xs={12} md={6}>
-            <Typography
-              py={2}
-              display={isMobileScreen() ? "flex" : "block"}
-              justifyContent={isMobileScreen() ? "center" : "left"}
-              textAlign={isMobileScreen() ? "center" : "left"}
-              variant="h4"
-              color="primary.contrastText"
-            >
-              Benjamim
-            </Typography>
-            <img src={Benjamim} width="100%" />
-          </Grid>
-          <Grid
-            display="flex"
-            alignItems={"center"}
-            width="100%"
-            item
-            xs={12}
-            md={6}
-          >
-            <Box>
-              <Typography
-                display={isMobileScreen() ? "flex" : "block"}
-                justifyContent={isMobileScreen() ? "center" : "left"}
-                textAlign={isMobileScreen() ? "center" : "left"}
-                mt={1}
-                variant="body1"
-                color="primary.contrastText"
-              >
-                Benjamin's 4 week transformation. He lost 12.6 pounds and
-                builted muscle. He used to eat junk food 4 times a week, and he
-                didn't train.. So we helped him with the right diet and the
-                right workout routine for these 4 weeks to change his life
-                completely the way he wanted.
               </Typography>
             </Box>
           </Grid>
