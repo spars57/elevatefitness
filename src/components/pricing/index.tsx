@@ -110,8 +110,7 @@ const Pricing = () => {
                         <b>Duration: 3 weeks</b>
                       </Box>
                       <p></p>
-                      Communicating 1 on 1 with your personal trainer every day
-                      from day 1 to day 10.
+                      Communicating 1 on 1 with your personal trainer every day for 3 weeks.
                       <p></p>
                       Train with experienced fitness trainers to reach your
                       individual goals and maximize results through personalized
@@ -169,8 +168,7 @@ const Pricing = () => {
                         <b>Duration: 4 weeks</b>
                       </Box>
                       <p></p>
-                      Communicating 1 on 1 with your personal trainer every day
-                      from day 1 to day 10.
+                      Communicating 1 on 1 with your personal trainer every day for 4 weeks.
                       <p></p>
                       Train with experienced fitness trainers to reach your
                       individual goals and maximize results thorough
@@ -228,8 +226,7 @@ const Pricing = () => {
                         <b>Duration: 5 weeks</b>
                       </Box>
                       <p></p>
-                      Communicating 1 on 1 with your personal trainer every day
-                      from day 1 to day 10.
+                      Communicating 1 on 1 with your personal trainer every day for 5 weeks.
                       <p></p>
                       Increase your strength and endurance through our
                       customized interval training sessions.
