@@ -23,12 +23,21 @@ import { useState } from "react";
 import Dialog from "@mui/material/Dialog";
 
 const Footer = () => {
-  const [open, setOpen] = useState(false);
+  const [openTerms, setOpenTerms] = useState(false);
+  const [openPolicy, setOpenPolicy] = useState(false);
   const theme = useTheme();
   return (
     <Box>
-      <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogTitle>Terms & Conditions</DialogTitle>
+      <Dialog
+        open={openTerms || openPolicy}
+        onClose={() => {
+          setOpenTerms(false);
+          setOpenPolicy(false);
+        }}
+      >
+        <DialogTitle>
+          {openTerms ? "Terms & Conditions" : "Privacy Policy"}
+        </DialogTitle>
         <Divider />
         <DialogContent>
           <List>
@@ -127,7 +136,7 @@ const Footer = () => {
         </DialogContent>
         <Divider />
         <DialogActions>
-          <Button variant="contained" onClick={() => setOpen(false)}>
+          <Button variant="contained" onClick={() => setOpenTerms(false)}>
             Close
           </Button>
         </DialogActions>
@@ -250,7 +259,7 @@ const Footer = () => {
                     color="primary.contrastText"
                     textAlign="center"
                     width={"100%"}
-                    onClick={() => setOpen(true)}
+                    onClick={() => setOpenTerms(true)}
                   >
                     Terms & Conditions
                   </Link>
@@ -259,6 +268,7 @@ const Footer = () => {
                     color="primary.contrastText"
                     textAlign="center"
                     width={"100%"}
+                    onClick={() => setOpenPolicy(true)}
                   >
                     Policy
                   </Link>
@@ -438,7 +448,7 @@ const Footer = () => {
                     color="primary.contrastText"
                     textAlign="center"
                     width={"100%"}
-                    onClick={() => setOpen(true)}
+                    onClick={() => setOpenTerms(true)}
                   >
                     Terms & Conditions
                   </Link>
@@ -447,6 +457,7 @@ const Footer = () => {
                     color="primary.contrastText"
                     textAlign="center"
                     width={"100%"}
+                    onClick={() => setOpenPolicy(true)}
                   >
                     Policy
                   </Link>
