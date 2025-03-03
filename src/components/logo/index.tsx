@@ -1,6 +1,6 @@
 import { TypographyProps } from "@mui/material";
 import { FC } from "react";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/no_background_logo.png";
 
 interface Props extends TypographyProps {
   collapsed?: boolean;
