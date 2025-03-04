@@ -48,7 +48,7 @@ const StartingVideo = () => {
               },
             }}
           >
-            Become your best version
+            Become the best version of yourself
           </Typography>
           <Typography
             variant="button"
@@ -57,17 +57,17 @@ const StartingVideo = () => {
             color="primary.contrastText"
             alignItems={"center"}
             justifyContent={"center"}
+            textAlign={"center"}
             sx={{
               typography: {
                 xs: { fontSize: 22 },
                 sm: { fontSize: 32 },
                 md: { fontSize: 52 },
                 lg: { fontSize: 62 },
-                xl: { fontSize: 72 },
               },
             }}
           >
-            Start your journey today
+            Embrace the journey to your dream physique
           </Typography>
           <Button
             variant="contained"

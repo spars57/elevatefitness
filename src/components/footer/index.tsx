@@ -47,8 +47,8 @@ const Footer = () => {
               <b>1. Introduction</b>
               <br />
               These Terms and Conditions govern your use of our website and the
-              purchase of our personal training services. By accessing and using
-              this website, you fully agree to these Terms and Conditions.
+              purchase of our Personalized Workouts. By accessing and using this
+              website, you fully agree to these Terms and Conditions.
             </ListItemText>
             <ListItemText>
               <b>2. General Information</b>

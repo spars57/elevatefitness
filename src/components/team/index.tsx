@@ -32,7 +32,7 @@ const TeamMembers = () => {
             <Grid item xs={12} md={4}>
               <ReviewCard
                 name="Adam G."
-                feedback="I used to be very lazy when it comes to training, I came across this platform on Instagram and decided to try it. For the first time in my life I felt joy while training, I don't know what it is but Thomas ( my personal trainer ) had something special inside him. I lost over 50kg in the first 3 months, couldn't be happier!"
+                feedback="I used to be very lazy when it comes to training, I came across this platform on Instagram and decided to try it. For the first time in my life I felt joy while training, I don't know what it is but Tomas ( my personal trainer ) had something special inside him. I lost over 18kg in the first 3 months, couldn't be happier!"
               />
             </Grid>
             <Grid item xs={12} md={4}>
@@ -44,7 +44,7 @@ const TeamMembers = () => {
             <Grid item xs={12} md={4}>
               <ReviewCard
                 name="Christian E."
-                feedback="By far the best service I found, I tried multiple similar services and never found what I was looking for which was feeling respected and included. The team behind this is very amazing, they treat you like a person and make you feel included! Highly recommend"
+                feedback="The Elevate Fitness team was very amazing they treated me so well and were always there for me when I needed their help. I highly recommend you join their program."
               />
             </Grid>
           </Grid>

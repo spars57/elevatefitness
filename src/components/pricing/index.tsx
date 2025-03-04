@@ -80,7 +80,7 @@ const Pricing = () => {
                   display="flex"
                   justifyContent={"center"}
                 >
-                  With ElevateFitness, our highly qualified trainers will get
+                  With ElevateFitness, our highly qualified services will get
                   you there. We can provide a tailored approach that is
                   specifically designed to help you become healthier and fitter
                   than ever before! Invest in yourself today and see the results
@@ -113,7 +113,7 @@ const Pricing = () => {
                       Communicating 1 on 1 with your personal trainer every day
                       for 3 weeks.
                       <p></p>
-                      Train with experienced fitness trainers to reach your
+                      Train with experienced fitness services to reach your
                       individual goals and maximize results through personalized
                       resistance training.
                       <p></p>
@@ -166,13 +166,13 @@ const Pricing = () => {
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
-                        <b>Duration: 4 weeks</b>
+                        <b>Duration: 3 weeks</b>
                       </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day
                       for 4 weeks.
                       <p></p>
-                      Train with experienced fitness trainers to reach your
+                      Train with experienced fitness services to reach your
                       individual goals and maximize results thorough
                       personalized resistance training.
                       <p></p>
@@ -225,7 +225,7 @@ const Pricing = () => {
                   description={
                     <Box display="flex" flexDirection={"column"}>
                       <Box display="flex" justifyContent={"center"}>
-                        <b>Duration: 5 weeks</b>
+                        <b>Duration: 3 weeks</b>
                       </Box>
                       <p></p>
                       Communicating 1 on 1 with your personal trainer every day

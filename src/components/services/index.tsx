@@ -89,7 +89,7 @@ const Services: FC = () => {
               <Grid item sm={12} md={6}>
                 <ServiceItem
                   src={gym_service}
-                  title="Personal Training Services"
+                  title="Personalized Workouts"
                   content="This service is available for you at the moment."
                 />
               </Grid>
@@ -112,7 +112,7 @@ const Services: FC = () => {
                 />
               </Grid>
             </Slide>
-            <Slide direction="right" in={trigger} timeout={1600}>
+            {/* <Slide direction="right" in={trigger} timeout={1600}>
               <Grid item sm={12} md={6}>
                 <ServiceItem
                   src={fighting_service}
@@ -120,7 +120,7 @@ const Services: FC = () => {
                   content="This service is available for you at the moment."
                 />
               </Grid>
-            </Slide>
+            </Slide> */}
           </Grid>
         </Grid>
       </Grid>
