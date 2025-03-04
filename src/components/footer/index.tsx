@@ -137,7 +137,13 @@ const Footer = () => {
         </DialogContent>
         <Divider />
         <DialogActions>
-          <Button variant="contained" onClick={() => setOpenTerms(false)}>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setOpenTerms(false);
+              setOpenPolicy(false);
+            }}
+          >
             Close
           </Button>
         </DialogActions>
