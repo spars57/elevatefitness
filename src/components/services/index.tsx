@@ -3,7 +3,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import ServiceItem from "./card";
 
 import diet_service from "../../assets/diet_service.webp";
-import fighting_service from "../../assets/fighting_service.webp";
+//import fighting_service from "../../assets/fighting_service.webp";
 import gym_service from "../../assets/gym_service.webp";
 import meditation_service from "../../assets/meditation_service.webp";
 import { isMobileScreen } from "../../constants";
