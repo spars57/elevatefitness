@@ -21,6 +21,7 @@ import scrollElementByIdIntoView from "../../utils/scroll-into-view";
 import Link from "../link";
 import { useState } from "react";
 import Dialog from "@mui/material/Dialog";
+import { WhatsApp } from "@mui/icons-material";
 
 const Footer = () => {
   const [openTerms, setOpenTerms] = useState(false);
@@ -293,6 +294,12 @@ const Footer = () => {
             >
               <InstagramIcon style={{ filter: "invert(1)" }} />
             </IconButton>
+            <IconButton
+              onClick={() => openURLInNewTab("https://wa.me/355695696335")}
+              color="primary"
+            >
+              <WhatsApp style={{ filter: "invert(1)" }} />
+            </IconButton>
           </Grid>
           <Grid
             item
@@ -482,6 +489,12 @@ const Footer = () => {
               color="primary"
             >
               <InstagramIcon style={{ filter: "invert(1)" }} />
+            </IconButton>
+            <IconButton
+              onClick={() => openURLInNewTab("https://wa.me/355695696335")}
+              color="primary"
+            >
+              <WhatsApp style={{ filter: "invert(1)" }} />
             </IconButton>
           </Grid>
 

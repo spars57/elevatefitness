@@ -10,7 +10,7 @@ export const questionsMapper: QuestionMapper = [
   {
     question: "What do I need to get started?",
     response:
-      "Proceed to payment for the package you want to enroll with, then fill in the required information to create your personalized program. We’ll contact you on WhatsApp or Maill immediatly for further communication.",
+      "Proceed to payment for the package you want to enroll with, then fill in the required information to create your personalized program. We’ll contact you on WhatsApp or Email immediatly for further communication.",
     timeout: order(1),
   },
   {
