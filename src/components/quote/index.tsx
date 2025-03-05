@@ -67,7 +67,7 @@ const Quote: FC<Props> = ({ src, quote }) => {
       </Slide>
       <Fade in={trigger} timeout={2000}>
         <Typography textAlign={"center"} width={"100%"}>
-          Start working today towards you dream body
+          Embrace the journey to your dream physique
         </Typography>
       </Fade>
       <Fade in={trigger} timeout={2000}>
