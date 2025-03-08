@@ -54,20 +54,12 @@ const Quote: FC<Props> = ({ src, quote }) => {
             },
           }}
         >
-          {quote == 1 && (
-            <>
-              <Box>START</Box>&nbsp;
-              <Box sx={{ color: theme.palette.secondary.main }}>YOUR</Box>
-              ,&nbsp;
-              <Box>JOURNEY</Box>&nbsp;
-              <Box sx={{ color: theme.palette.secondary.main }}>TODAY</Box>!
-            </>
-          )}
+          {quote == 1 && <Box>EMBRACE THE JOURNEY TO YOUR DREAM PHYSIQUE</Box>}
         </Typography>
       </Slide>
       <Fade in={trigger} timeout={2000}>
         <Typography textAlign={"center"} width={"100%"}>
-          Embrace the journey to your dream physique
+          Start your journey today.
         </Typography>
       </Fade>
       <Fade in={trigger} timeout={2000}>
