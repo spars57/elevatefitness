@@ -1,4 +1,4 @@
-import { Box, Button, Fade, Slide, Typography, useTheme } from "@mui/material";
+import { Box, Button, Fade, Slide, Typography } from "@mui/material";
 import { FC, useEffect, useState } from "react";
 
 import { isMobileScreen } from "../../constants";
@@ -10,8 +10,6 @@ type Props = {
 };
 
 const Quote: FC<Props> = ({ src, quote }) => {
-  const theme = useTheme();
-
   const [trigger, setTrigger] = useState(false);
 
   useEffect(() => {
